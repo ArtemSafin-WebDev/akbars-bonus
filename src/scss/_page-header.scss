@@ -1,0 +1,40 @@
+.page-header {
+    display: flex;
+    color: white;
+    background-color: $green;
+    position: relative;
+    z-index: 1000;
+    min-height: 50px;
+    
+    @include breakpoint(tablet) {
+        min-height: initial;
+        height: 50px;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 15px 40px rgba(black, .15);
+        z-index: -1;
+        pointer-events: none;
+    }
+}
+
+
+
+
+
+.page-header__logo {
+    margin-right: 20px;
+}
+
+
+.page-header__page-title {
+    font-size: 20px;
+    line-height: 1.7;
+    font-weight: 400;
+}

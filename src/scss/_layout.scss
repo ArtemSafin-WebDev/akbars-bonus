@@ -1,0 +1,26 @@
+.container {
+    width: 100%;
+    max-width: $max-container-width + $desktop-content-padding * 2;
+    padding: 0 $desktop-content-padding;
+    margin: 0 auto;
+    &--inner {
+        max-width: $max-inner-container-width;
+    }
+
+
+    &--flex {
+        display: flex;
+    }
+
+    &--align-items-center {
+        align-items: center;
+    }
+}
+
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    overflow: hidden;
+}

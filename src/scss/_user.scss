@@ -1,0 +1,94 @@
+.user {
+    display: flex;
+    align-self: stretch;
+    width: 39%;
+    justify-content: flex-end;
+    position: relative;
+    @include breakpoint(large-desktop) {
+        width: auto;
+        margin-left: auto;
+    }
+    @include breakpoint(desktop) {
+        width: 50%;
+        flex-grow: 1;
+        justify-content: center;
+        align-items: center;
+        margin-left: 0;
+    }   
+    &::before {
+        content: '';
+        position: absolute;
+        background-color: $dark-grey;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100vw;
+        z-index: -1;
+        @include breakpoint(desktop) {
+            display: none;
+        }
+    }
+}
+
+
+.user__divider {
+    align-self: center;
+    width: 1px;
+    height: 24px;
+    background-color: #fff;
+    flex-shrink: 0;
+    @include breakpoint(desktop) {
+        display: none;
+    }
+}
+
+
+.user__link {
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px;
+    &:last-child {
+        padding-right: 0;
+    }
+    &:link,
+    &:visited {
+        color: white;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+
+    > svg {
+        fill: white;
+        margin-left: 20px;
+        width: 24px;
+        height: 24px;
+        @include breakpoint(desktop) {
+            order: -1;
+            margin-left: 0;
+            margin-right: 10px;
+        }
+    }
+}
+
+
+
+.user__link--sign-in {
+    @include breakpoint(desktop) {
+        order: -1;
+    }
+}
+
+
+.user__link--sign-up {
+    @include breakpoint(desktop) {
+        text-transform: uppercase;
+        border: 2px solid white;
+        margin-left: 60px;
+        letter-spacing: .2px;
+        padding: 11px 26px;
+    }
+}

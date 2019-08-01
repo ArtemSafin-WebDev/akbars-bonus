@@ -1,0 +1,166 @@
+.how-to-get {
+    display: flex;
+    padding-bottom: 100px;
+}
+
+
+.how-to-get__image-block {
+    width: 400px;
+    position: relative;
+    margin-left: -120px;
+    &::before {
+        content: '';
+        width: 436px;
+        height: 436px;
+        display: block;
+        position: absolute;
+        z-index: -1;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: contain;
+        background-image: url("data:image/svg+xml,%3Csvg height='100' width='100' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%23256963;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23D81E23;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='50' fill='url(%23grad1)' /%3E%3C/svg%3E");
+    }
+}
+
+
+.how-to-get__image {
+    max-width: initial;
+    width: 522px;
+    margin-left: -70px;
+    margin-top: -60px;
+}
+
+
+.how-to-get__stages-block {
+    width: 50%;
+    flex-grow: 1;
+}
+
+
+
+.how-to-get__stages-heading {
+    text-align: right;
+    margin-bottom: 60px;
+}
+
+
+.how-to-get__stages-heading-small-text {
+    font-size: 35px;
+    line-height: 1.15;
+    font-weight: 300;
+    letter-spacing: .25px;
+    color: $light-grey;
+    display: block;
+}
+
+.how-to-get__stages-heading-large-text {
+    color: $dark-grey;
+    font-size: 110px;
+    line-height: 1;
+    letter-spacing: .25px;
+    font-weight: 700;
+    display: block;
+}
+
+
+.how-to-get__stages-list {
+    display: flex;
+    counter-reset: action;  
+    margin: -10px;
+}
+
+
+.how-to-get__stages-list-item {
+    width: 25%;
+    counter-increment: action;
+    padding: 10px;
+    position: relative;
+    &::after {
+        content: '';
+       right: -5%;
+        top: 110px;
+        position: absolute;
+        width: 50px;
+        height: 10px;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 51.82 9.85'%3E%3Cpath fill='%23B9B9B9' d='M47.27 0l-.73.68 3.44 3.73H0v1h50.02l-3.48 3.76.73.68 4.55-4.92L47.27 0z'/%3E%3C/svg%3E");
+    }
+
+    &:last-child {
+        &::after {
+            display: none;
+        }
+    }
+}
+
+
+.how-to-get__stages-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+
+.how-to-get__stages-number {
+    position: relative;
+    &::before {
+        content: counter(action);
+        font-size: 177px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: .25px;
+        text-shadow:
+		-1px -1px 0 $light-grey,
+		1px -1px 0 $light-grey,
+		-1px 1px 0 $light-grey,
+        1px 1px 0 $light-grey;
+        color: white;
+        @supports ((text-stroke: 1px $light-grey) or (-webkit-text-stroke: 1px $light-grey)) {
+            text-stroke: 1px $light-grey;
+            -webkit-text-stroke: 1px $light-grey;
+            text-shadow: initial;
+            color: transparent;
+        }
+    }
+
+    &::after {
+        content: counter(action);
+        font-size: 120px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: .25px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        margin-left: -15px;
+        transform: translateY(-50%);
+        color: $green;
+        @supports (((background-clip: text) or (-webkit-background-clip: text)) and (-webkit-text-fill-color: transparent)) {
+            background-image: linear-gradient(to right, $green, $red);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+    }
+}
+
+
+.how-to-get__stages-action {
+    font-size: 22px;
+    line-height: 1.55;
+    color: #5F5F5F;
+}
+
+
+.how-to-get__stages-action-details {
+    font-size: 16px;
+    line-height: 24px;
+    color: #7E7E83;
+    margin-top: 25px;
+}
