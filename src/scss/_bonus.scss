@@ -8,16 +8,28 @@
         margin-top: -70px;
         margin-bottom: -70px;
     }
+    @include breakpoint(mobile) {
+        margin-left: -20px;
+        margin-right: -20px;
+        margin-top: -90px;
+    }
     .swiper-container {
         width: 100%;
         padding-top: 60px;
         padding-bottom: 60px;
         padding-left: 40px;
         padding-right: 40px;
+        @include breakpoint(mobile) {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
     }
     .swiper-slide {
         height: auto;
         width: 84%;
+        @include breakpoint(mobile) {
+            width: 86%;
+        }
     }
 
     .swiper-pagination {
@@ -96,6 +108,7 @@
     @include breakpoint(laptop) {
         margin-bottom: 60px;
     }
+   
 }
 
 .bonus__categories-heading-small-text {
@@ -107,6 +120,10 @@
     display: block;
     @include breakpoint(small-tablet) {
         font-size: 25px;
+    }
+     @include breakpoint(mobile) {
+        font-size: 22px;
+        line-height: 28px;
     }
 }
 
@@ -128,6 +145,10 @@
         font-size: 60px;
         line-height: 60px;
     }
+    @include breakpoint(mobile) {
+        font-size: 38px;
+        line-height: 45px;
+    }
 }
 
 .bonus__categories-heading-place {
@@ -139,6 +160,10 @@
     display: block;
     @include breakpoint(small-tablet) {
         font-size: 25px;
+    }
+    @include breakpoint(mobile) {
+        font-size: 22px;
+        line-height: 28px;
     }
 }
 
@@ -180,6 +205,10 @@
         min-height: 240px;
         padding: 40px 35px;
     }
+    @include breakpoint(mobile) {
+        min-height: 200px;
+        padding: 15px 20px;
+    }
     svg {
         fill: $green;
         position: absolute;
@@ -193,9 +222,16 @@
             width: 300px;
             height: 300px;
         }
+        @include breakpoint(mobile) {
+            width: 200px;
+            height: 200px;
+        }
         &.icon-tickets {
             right: -90px;
             margin-bottom: 5px;
+            @include breakpoint(mobile) {
+                right: -70px;
+            }
         }
 
         &.icon-food {
@@ -211,6 +247,10 @@
             @include breakpoint(small-tablet) {
                 width: 300px;
                 height: 300px;
+            }
+            @include breakpoint(mobile) {
+                width: 200px;
+                height: 200px;
             }
         }
     }
@@ -230,6 +270,9 @@
     @include breakpoint(small-tablet) {
         font-size: 110px;
     }
+    @include breakpoint(mobile) {
+        font-size: 70px;
+    }
     @supports (((background-clip: text) or (-webkit-background-clip: text)) and (-webkit-text-fill-color: transparent)) {
         background-image: linear-gradient(to right, $green, $red);
         background-clip: text;
@@ -248,6 +291,9 @@
     @include breakpoint(small-tablet) {
         font-size: 22px;
     }
+    @include breakpoint(mobile) {
+        font-size: 16px;
+    }
 }
 
 .bonus__partners {
@@ -257,6 +303,9 @@
     padding-top: 100px;
     display: flex;
     flex-direction: column;
+    @include breakpoint(mobile) {
+        padding-top: 30px;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -287,11 +336,19 @@
         background-size: contain;
         background-position: center;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 971.51 652.53'%3E%3Cpath fill='%23D81E23' d='M452.92 0L0 434.02 111.21 550.1l336.86-322.59 407.36 425.02 116.08-111.2L452.92 0z'/%3E%3C/svg%3E");
+        pointer-events: none;
         @include breakpoint(laptop) {
             width: 400px;
             height: 275px;
             margin-left: -180px;
             margin-top: -100px;
+        }
+
+        @include breakpoint(mobile) {
+            width: 300px;
+            height: 200px;
+            margin-top: -70px;
+            margin-left: -150px;
         }
     }
 }
@@ -300,6 +357,10 @@
     margin-bottom: 50px;
     position: relative;
     z-index: 5;
+    @include breakpoint(mobile) {
+        margin-bottom: 40px;
+
+    }
 }
 
 .bonus__partners-heading-small-text {
@@ -312,6 +373,10 @@
     @include breakpoint(small-tablet) {
         font-size: 25px;
         
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 22px;
     }
 }
 
@@ -333,6 +398,10 @@
         font-size: 60px;
         line-height: 60px;
     }
+    @include breakpoint(mobile) {
+        font-size: 38px;
+        line-height: 38px;
+    }
 }
 
 .bonus__partners-tabs {
@@ -342,6 +411,10 @@
 .bonus__partners-tabs-navigation {
     display: flex;
     align-items: center;
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: stretch;
+    }
 }
 
 
@@ -357,6 +430,13 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    display: none;
+    @include breakpoint(small-tablet) {
+        display: flex;
+    }
+    @include breakpoint(mobile) {
+        margin-top: 0px;
+    }
     &::before {
         content: '';
         width: 10px;
@@ -385,8 +465,20 @@
         font-size: 18px;
         line-height: 34px;
     }
+    @include breakpoint(mobile) {
+        margin-right: 0;
+        padding: 0;
+        width: 100%;
+        font-size: 16px;
+        line-height: 20px;
+        margin-bottom: 10px;
+
+    }
     &:last-child {
         margin-right: 0;
+        @include breakpoint(mobile) {
+            margin-bottom: 0;
+        }
     }
     &:link,
     &:visited {
@@ -425,6 +517,9 @@
     }
     @include breakpoint(small-tablet) {
         margin-top: 20px;
+    }
+    @include breakpoint(mobile) {
+        margin-top: 35px;
     }
     &::before {
         content: '';
@@ -515,6 +610,9 @@
     @include breakpoint(small-tablet) {
         margin-top: 0;
     }
+    @include breakpoint(mobile) {
+        margin-top: 30px;
+    }
     &.hidden {
         display: none;
     }
@@ -529,6 +627,10 @@
         margin: 0 -15px;
         margin-bottom: -30px;
     }
+    @include breakpoint(mobile) {
+        margin: 0 -10px;
+        margin-bottom: -20px;
+    }
 }
 
 .bonus__partners-grid-item {
@@ -539,6 +641,11 @@
         width: 50%;
         padding: 0 15px;
         margin-bottom: 30px;
+    }
+    @include breakpoint(mobile) {
+        width: 100%;
+        padding: 0 10px;
+        margin-bottom: 20px;
     }
 }
 
@@ -610,6 +717,11 @@
     font-size: 22px;
     line-height: 30px;
     color: #5f5f5f;
+    @include breakpoint(mobile) {
+        font-size: 18px;
+        line-height: 1.2;
+        margin-top: 16px;
+    }
 }
 
 .bonus__partners-grid-card-place-type {
@@ -617,16 +729,28 @@
     font-size: 16px;
     line-height: 24px;
     margin-top: 4px;
+    @include breakpoint(mobile) {
+        font-size: 14px;
+        line-height: 1.2;
+    }
 }
 
 .bonus__partners-grid-card-description-block {
     margin-top: 25px;
+    @include breakpoint(mobile) {
+        margin-top: 20px;
+    }
     p {
         font-weight: 300;
         font-size: 16px;
         line-height: 24px;
         color: $dark-grey;
         margin: 25px 0;
+        @include breakpoint(mobile) {
+            font-size: 14px;
+            line-height: 20px;
+            margin: 20px 0;
+        }
         &:first-child {
             margin-top: 0;
         }
@@ -663,6 +787,9 @@
         width: 352px;
         margin-right: -160px;
         top: 70px;
+    }
+    @include breakpoint(mobile) {
+        display: none;
     }
 }
 

@@ -10,7 +10,7 @@ import masonryLayout from './masonry';
 import hide from './hide';
 import accordeons from './accordeons';
 import modals from './modals';
-import sliders from './sliders';
+import bonusSlider from './bonusSlider';
 
 document.addEventListener('DOMContentLoaded', function() {
     // Полифилл .contains для IE 11
@@ -55,6 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Слайдеры
 
-    sliders();
+    bonusSlider();
     
 });

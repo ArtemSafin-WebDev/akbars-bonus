@@ -11,6 +11,11 @@
     @include breakpoint(desktop) {
         margin-left: 0;
     }
+
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        margin: auto 0;
+    }
 }
 
 .main-nav__list {
@@ -37,6 +42,12 @@
     @include breakpoint(small-tablet) {
         padding-right: 30px;
     }
+    @include breakpoint(mobile) {
+        padding: 0;
+        &::after {
+            display: none;
+        }
+    }
 }
 
 .main-nav__link {
@@ -55,6 +66,12 @@
     @include breakpoint(small-tablet) {
         font-size: 18px;
         padding: 12px 20px;
+    }
+    @include breakpoint(mobile) {
+        width: 100%;
+        font-size: 22px;
+        line-height: 24px;
+        padding: 16px 20px;
     }
     &:link,
     &:visited {

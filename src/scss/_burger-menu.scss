@@ -20,6 +20,18 @@
         backface-visibility: hidden;
     }
 
+    @include breakpoint(mobile) {
+        position: fixed;
+        top: 40px;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 40px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        padding: 17px $mobile-content-padding;
+        flex-direction: column;
+    }
+
     .burger-menu-open & {
         opacity: 1;
         visibility: visible;
@@ -40,6 +52,10 @@
 
     @include breakpoint(desktop) {
         display: flex;
+    }
+    @include breakpoint(mobile) {
+        width: 50px;
+        margin-right: -$mobile-content-padding;
     }
     > span {
         width: 22px;

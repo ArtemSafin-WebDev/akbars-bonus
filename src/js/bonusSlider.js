@@ -40,6 +40,12 @@ export default function() {
                 el: '.swiper-pagination',
                 clickable: true
             },
+            breakpoints: {
+                768: {
+                    slidesPerView: 'auto',
+                    spaceBetween: 20
+                }
+            },
             on: {
                 beforeResize() {
                     if (window.innerWidth <= 768) {

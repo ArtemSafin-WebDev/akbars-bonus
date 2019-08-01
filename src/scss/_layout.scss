@@ -3,6 +3,9 @@
     max-width: $max-container-width + $desktop-content-padding * 2;
     padding: 0 $desktop-content-padding;
     margin: 0 auto;
+    @include breakpoint(mobile) {
+        padding: 0 $mobile-content-padding;
+    }
     &--inner {
         max-width: $max-inner-container-width;
     }
@@ -23,4 +26,7 @@
     flex-direction: column;
     flex-grow: 1;
     overflow: hidden;
+    @include breakpoint(mobile) {
+        padding-top: 40px;
+    }
 }
