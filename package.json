@@ -19,6 +19,7 @@
     "not dead"
   ],
   "dependencies": {
+    "@fancyapps/fancybox": "^3.5.7",
     "body-scroll-lock": "^2.6.4",
     "classlist-polyfill": "^1.2.0",
     "core-js": "^3.1.4",

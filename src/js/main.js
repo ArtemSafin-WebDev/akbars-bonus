@@ -4,6 +4,8 @@
 import objectFitImages from 'object-fit-images';
 import detectIt from 'detect-it';
 
+import '@fancyapps/fancybox';
+
 import burgerMenu from './burgerMenu';
 import bonusTabs from './bonusTabs';
 import masonryLayout from './masonry';

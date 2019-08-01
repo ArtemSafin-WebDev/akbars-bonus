@@ -18,6 +18,7 @@
         left: calc((100vw - 100%) / 2 * -1);
         background-color: $dark-grey;
         z-index: -1;
+        pointer-events: none;
     }
     @include breakpoint(mobile) {
         flex-direction: column;
@@ -114,14 +115,17 @@
         top: -170px;
         left: -120px;
         z-index: -1;
+        pointer-events: none;
         @include breakpoint(small-tablet) {
             font-size: 300px;
-            top: -220px;
+            line-height: 300px;
+            top: -86px;
             left: -40px;
         }
         @include breakpoint(mobile) {
             font-size: 190px;
-            top: -255px;
+            line-height: 190px;
+            top: -50px;
         }
 
     }
@@ -144,6 +148,7 @@
     margin-bottom: 115px;
     position: relative;
     z-index: 5;
+    transition: background-color .3s;
     @include breakpoint(small-tablet) {
         margin-top: 90px;
         margin-bottom: 72px;
@@ -158,6 +163,12 @@
     &:link,
     &:visited {
         color: white;
+    }
+
+
+
+    &:hover {
+        background-color: $red-hover;
     }
 }
 
