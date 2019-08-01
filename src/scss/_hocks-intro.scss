@@ -5,6 +5,15 @@
     color: white;
     display: flex;
     margin-bottom: 235px;
+    @include breakpoint(desktop) {
+        height: 46vw;
+    }
+    @include breakpoint(laptop) {
+        margin-bottom: 150px;
+    }
+    @include breakpoint(small-tablet) {
+        margin-bottom: 100px;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -15,6 +24,12 @@
         background-image: linear-gradient(to right, $green, $red);
         z-index: 1;
         pointer-events: none;
+        @include breakpoint(desktop) {
+            right: 26%;
+        }
+        @include breakpoint(small-tablet) {
+            right: 21%;
+        }
     }
 
 
@@ -27,6 +42,23 @@
         margin-left: 85px;
         top: 80px;
         z-index: 1;
+
+        @include breakpoint(laptop) {
+            width: 340px;
+            height: 340px;
+            margin-left: 65px;
+        }
+        @include breakpoint(tablet) {
+            width: 272px;
+            height: 272px;
+            margin-left: 54px;
+        }
+        @include breakpoint(small-tablet) {
+            width: 150px;
+            height: 150px;
+            top: 54px;
+            margin-left: 70px;
+        }
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -42,6 +74,16 @@
     line-height: 115px;
     letter-spacing: 2.5px;
     text-transform: uppercase;
+    
+    @include breakpoint(laptop) {
+        font-size: 80px;
+        line-height: 90px;
+    }
+
+    @include breakpoint(small-tablet) {
+        font-size: 60px;
+        line-height: 60px;
+    }
 }
 
 
@@ -49,6 +91,14 @@
     font-size: 24px;
     line-height: 1.5;
     margin-top: 10px;
+    @include breakpoint(laptop) {
+        font-size: 20px;
+        line-height: 24px;
+        margin-top: 25px;
+    }
+    @include breakpoint(small-tablet) {
+        margin-top: 30px;
+    }
 }
 
 
@@ -78,6 +128,9 @@
     width: 76%;
     margin-top: 85px;
     pointer-events: none;
+    @include breakpoint(small-tablet) {
+        margin-top: 40px;
+    }
     &::before {
         content: '#';
         position: absolute;
@@ -107,6 +160,19 @@
     z-index: 6;
     left: 31.5%;
     box-shadow: 0 15px 60px rgba(black, .3);
+    @include breakpoint(desktop) {
+        width: 60%;
+    }
+    @include breakpoint(small-tablet) {
+        bottom: -20px;
+        left: 43%;
+        width: 58%;
+    }
+    &:hover {
+        .icon-play {
+            fill-opacity: 1;
+        }
+    }
 }
 
 
@@ -122,6 +188,8 @@
         left: 50%;
         transform: translate(-50%, -50%);
         fill: white;
+        fill-opacity: .7;
+        transition: fill-opacity .2s;
     }
 }
 

@@ -3,6 +3,9 @@
     padding-bottom: 300px;
     position: relative;
     z-index: 1;
+    @include breakpoint(laptop) {
+        padding-bottom: 170px;
+    }
     &::after {
         content: '';
         z-index: -1;
@@ -33,6 +36,9 @@
     line-height: 1.2;
     letter-spacing: .25px;
     display: block;
+    @include breakpoint(small-tablet) {
+        font-size: 25px;
+    }
 }
 
 
@@ -43,6 +49,14 @@
     letter-spacing: .25px;
     font-weight: 700;
     display: block;
+    @include breakpoint(laptop) {
+        font-size: 80px;
+        line-height: 90px;
+    }
+    @include breakpoint(small-tablet) {
+        font-size: 60px;
+        line-height: 60px;
+    }
 }
 
 
@@ -81,6 +95,9 @@
     color: $dark-grey;
     font-size: 35px;
     line-height: 1.2;
+    @include breakpoint(small-tablet) {
+        font-size: 22px;
+    }
 }
 
 
@@ -91,6 +108,9 @@
     margin-right: 30px;
     flex-shrink: 0;
     position: relative;
+    @include breakpoint(small-tablet) {
+        margin-top: 2px;
+    }
     > span {
         width: 100%;
         height: 4px;
@@ -150,6 +170,10 @@
     color: #7E7E83;
     padding-left: 50px;
     display: none;
+    @include breakpoint(small-tablet) {
+        font-size: 16px;
+        line-height: 24px;
+    }
     // height: 0;
     // overflow: hidden;
     p {

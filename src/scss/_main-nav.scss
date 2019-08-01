@@ -33,7 +33,9 @@
             right: 0;
             
         }
-       
+    }
+    @include breakpoint(small-tablet) {
+        padding-right: 30px;
     }
 }
 
@@ -49,6 +51,10 @@
         font-size: 22px;
         line-height: 1.54;
         padding: 15px 20px;
+    }
+    @include breakpoint(small-tablet) {
+        font-size: 18px;
+        padding: 12px 20px;
     }
     &:link,
     &:visited {

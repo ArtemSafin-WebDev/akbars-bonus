@@ -1,6 +1,9 @@
 .how-to-get {
     display: flex;
     padding-bottom: 100px;
+    @include breakpoint(small-tablet) {
+        padding-bottom: 60px;
+    }
 }
 
 
@@ -8,6 +11,9 @@
     width: 400px;
     position: relative;
     margin-left: -120px;
+    @include breakpoint(laptop) {
+        display: none;
+    }
     &::before {
         content: '';
         width: 436px;
@@ -44,6 +50,10 @@
 .how-to-get__stages-heading {
     text-align: right;
     margin-bottom: 60px;
+    @include breakpoint(laptop) {
+        text-align: left;
+        margin-bottom: 30px;
+    }
 }
 
 
@@ -54,6 +64,13 @@
     letter-spacing: .25px;
     color: $light-grey;
     display: block;
+    @include breakpoint(laptop) {
+        font-size: 35px;
+        line-height: 40px;
+    }
+    @include breakpoint(small-tablet) {
+        font-size: 25px;
+    }
 }
 
 .how-to-get__stages-heading-large-text {
@@ -63,6 +80,18 @@
     letter-spacing: .25px;
     font-weight: 700;
     display: block;
+   
+    @include breakpoint(laptop) {
+        font-size: 80px;
+        line-height: 90px;
+        position: relative;
+        left: -3px;
+    }
+    @include breakpoint(small-tablet) {
+        font-size: 60px;
+        line-height: 60px;
+    }
+    
 }
 
 
@@ -70,6 +99,9 @@
     display: flex;
     counter-reset: action;  
     margin: -10px;
+    @include breakpoint(small-tablet) {
+        flex-wrap: wrap;
+    }
 }
 
 
@@ -78,6 +110,9 @@
     counter-increment: action;
     padding: 10px;
     position: relative;
+    @include breakpoint(small-tablet) {
+        width: 50%;
+    }
     &::after {
         content: '';
        right: -5%;
@@ -94,6 +129,15 @@
     &:last-child {
         &::after {
             display: none;
+        }
+    }
+
+
+    &:nth-child(even) {
+        @include breakpoint(small-tablet) {
+            &::after {
+                display: none;
+            }
         }
     }
 }
@@ -155,6 +199,10 @@
     font-size: 22px;
     line-height: 1.55;
     color: #5F5F5F;
+    @include breakpoint(small-tablet) {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
 
@@ -163,4 +211,8 @@
     line-height: 24px;
     color: #7E7E83;
     margin-top: 25px;
+    @include breakpoint(small-tablet) {
+       
+        margin-top: 5px;
+    }
 }
