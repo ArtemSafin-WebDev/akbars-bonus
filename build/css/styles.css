@@ -693,6 +693,11 @@ svg {
     left: calc((100vw - 100%) / 2 * -1);
     background-color: #4B4D53;
     z-index: -1; }
+  @media only screen and (max-width: 768px) {
+    .page-footer__links {
+      flex-direction: column;
+      align-items: stretch;
+      padding: 30px 0; } }
 
 .page-footer__hocks {
   position: relative;
@@ -706,18 +711,33 @@ svg {
     left: calc((100vw - 100%) / 2 * -1);
     background-color: #ECECEF;
     z-index: -1; }
+    @media only screen and (max-width: 768px) {
+      .page-footer__hocks::before {
+        height: 126px; } }
 
 .page-footer__link {
   color: white;
   font-size: 16px;
   line-height: 24px;
   margin-right: 40px; }
+  @media only screen and (max-width: 768px) {
+    .page-footer__link {
+      margin-bottom: 15px; } }
   .page-footer__link:last-child {
     margin-right: 0; }
+    @media only screen and (max-width: 768px) {
+      .page-footer__link:last-child {
+        margin-bottom: 0; } }
   .page-footer__link:link, .page-footer__link:visited {
     color: white; }
+  .page-footer__link:hover {
+    text-decoration: underline; }
   .page-footer__link--akbars {
     margin-left: auto; }
+    @media only screen and (max-width: 768px) {
+      .page-footer__link--akbars {
+        margin-left: 0;
+        margin-top: 10px; } }
 
 .page-footer__hocks-heading {
   color: #53555D;
@@ -725,7 +745,7 @@ svg {
   line-height: 115px;
   font-weight: 700;
   letter-spacing: .25px;
-  text-shadow: 0px 15px 60px rgba(0, 0, 0, 0.3);
+  text-shadow: 0px 15px 60px rgba(255, 255, 255, 0.3);
   text-transform: uppercase;
   position: relative;
   z-index: 1; }
@@ -737,6 +757,10 @@ svg {
     .page-footer__hocks-heading {
       font-size: 60px;
       line-height: 60px; } }
+  @media only screen and (max-width: 768px) {
+    .page-footer__hocks-heading {
+      font-size: 38px;
+      line-height: 45px; } }
   .page-footer__hocks-heading::before {
     content: '#';
     font-size: 530px;
@@ -753,6 +777,10 @@ svg {
         font-size: 300px;
         top: -220px;
         left: -40px; } }
+    @media only screen and (max-width: 768px) {
+      .page-footer__hocks-heading::before {
+        font-size: 190px;
+        top: -255px; } }
 
 .page-footer__hocks-link {
   font-size: 16px;
@@ -774,6 +802,13 @@ svg {
     .page-footer__hocks-link {
       margin-top: 90px;
       margin-bottom: 72px; } }
+  @media only screen and (max-width: 768px) {
+    .page-footer__hocks-link {
+      margin-bottom: 45px;
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 45px; } }
   .page-footer__hocks-link:link, .page-footer__hocks-link:visited {
     color: white; }
 
@@ -792,6 +827,12 @@ svg {
     .page-footer__hocks-leopard {
       width: 360px;
       bottom: -50px; } }
+  @media only screen and (max-width: 968px) {
+    .page-footer__hocks-leopard {
+      position: static;
+      width: 100%;
+      height: auto;
+      margin-bottom: -60px; } }
 
 .main-nav {
   margin-left: auto;
@@ -1054,6 +1095,22 @@ footer {
 .burger-menu-open footer {
   -webkit-filter: blur(5px);
           filter: blur(5px); }
+
+.burger-menu__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility 0s linear .3s; }
+  .burger-menu-open .burger-menu__overlay {
+    opacity: 1;
+    visibility: visible;
+    transition: .3s; }
 
 .hocks-intro {
   height: 700px;
@@ -1468,6 +1525,44 @@ footer {
     .how-to-get__stages-action-details {
       margin-top: 5px; } }
 
+@media only screen and (max-width: 768px) {
+  .how-to-get__stages-slider {
+    margin-left: -20px;
+    margin-right: -20px; } }
+
+.how-to-get__stages-slider .swiper-container {
+  width: 100%; }
+  @media only screen and (max-width: 768px) {
+    .how-to-get__stages-slider .swiper-container {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 20px; } }
+
+.how-to-get__stages-slider .swiper-slide {
+  height: auto;
+  counter-increment: action; }
+
+.how-to-get__stages-slider .swiper-pagination {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px; }
+
+.how-to-get__stages-slider .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  border: 1px solid #256963;
+  opacity: 1;
+  margin: 0 10px !important;
+  transition: background-color .2s, transform .2s;
+  outline: none; }
+
+.how-to-get__stages-slider .swiper-pagination-bullet-active {
+  background-color: #256963;
+  transform: scale(1.6); }
+
 @media only screen and (max-width: 968px) {
   .bonus__categories-slider {
     margin-left: -40px;
@@ -1559,6 +1654,12 @@ footer {
         width: 596px;
         height: 545px;
         right: -420px; } }
+    @media only screen and (max-width: 768px) {
+      .bonus__categories::after {
+        width: 365px;
+        height: 333px;
+        right: -250px;
+        top: -120px; } }
 
 .bonus__categories-heading {
   margin-bottom: 90px; }
@@ -1946,6 +2047,9 @@ footer {
     background-size: contain;
     background-position: center;
     background-image: url("data:image/svg+xml,%3Csvg id='Layer_1' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 650.99 143.65'%3E%3Cdefs%3E%3Cstyle%3E .cls-1%7Bfill:%231d1d1b%7D %3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M119.31 21.94h1.38v1.38h-1.38zM191.84 21.94h1.38v1.38h-1.38zM46.79 21.94h1.38v1.38h-1.38zM46.79 120.33h1.38v1.38h-1.38zM46.79 46.54h1.38v1.38h-1.38zM46.79 71.14h1.38v1.38h-1.38zM46.79 95.73h1.38v1.38h-1.38zM288.53 21.94h1.38v1.38h-1.38zM216.01 21.94h1.38v1.38h-1.38zM22.62 120.33H24v1.38h-1.38zM191.84 95.73h1.38v1.38h-1.38zM191.84 71.14h1.38v1.38h-1.38zM191.84 120.33h1.38v1.38h-1.38zM288.53 120.33h1.38v1.38h-1.38zM22.62 95.73H24v1.38h-1.38zM22.62 21.94H24v1.38h-1.38zM191.84 46.54h1.38v1.38h-1.38zM22.62 71.14H24v1.38h-1.38zM288.53 46.54h1.38v1.38h-1.38zM22.62 46.54H24v1.38h-1.38zM288.53 95.73h1.38v1.38h-1.38zM288.53 71.14h1.38v1.38h-1.38zM240.18 46.54h1.38v1.38h-1.38zM240.18 21.94h1.38v1.38h-1.38zM167.66 71.14h1.38v1.38h-1.38zM70.97 21.94h1.38v1.38h-1.38zM70.97 46.54h1.38v1.38h-1.38zM264.36 21.94h1.38v1.38h-1.38zM240.18 120.33h1.38v1.38h-1.38zM240.18 71.14h1.38v1.38h-1.38zM240.18 95.73h1.38v1.38h-1.38zM95.14 120.33h1.38v1.38h-1.38zM95.14 95.73h1.38v1.38h-1.38zM95.14 21.94h1.38v1.38h-1.38zM95.14 71.14h1.38v1.38h-1.38zM95.14 46.54h1.38v1.38h-1.38zM264.36 95.73h1.38v1.38h-1.38zM119.31 46.54h1.38v1.38h-1.38zM119.31 71.14h1.38v1.38h-1.38zM119.31 95.73h1.38v1.38h-1.38zM119.31 120.33h1.38v1.38h-1.38zM264.36 120.33h1.38v1.38h-1.38zM167.66 46.54h1.38v1.38h-1.38zM167.66 21.94h1.38v1.38h-1.38zM264.36 71.14h1.38v1.38h-1.38zM264.36 46.54h1.38v1.38h-1.38zM70.97 95.73h1.38v1.38h-1.38zM70.97 71.14h1.38v1.38h-1.38zM70.97 120.33h1.38v1.38h-1.38zM216.01 95.73h1.38v1.38h-1.38zM312.71 21.94h1.38v1.38h-1.38zM143.49 46.54h1.38v1.38h-1.38zM312.71 71.14h1.38v1.38h-1.38zM312.71 120.33h1.38v1.38h-1.38zM312.71 95.73h1.38v1.38h-1.38zM216.01 120.33h1.38v1.38h-1.38zM143.49 95.73h1.38v1.38h-1.38zM143.49 21.94h1.38v1.38h-1.38zM143.49 120.33h1.38v1.38h-1.38zM216.01 46.54h1.38v1.38h-1.38zM312.71 46.54h1.38v1.38h-1.38zM167.66 120.33h1.38v1.38h-1.38zM167.66 95.73h1.38v1.38h-1.38zM216.01 71.14h1.38v1.38h-1.38zM143.49 71.14h1.38v1.38h-1.38zM22.72 0h1.18v4.27h-1.18zM46.89 0h1.18v4.27h-1.18zM71.06 0h1.18v4.27h-1.18zM95.24 0h1.18v4.27h-1.18zM119.41 0h1.18v4.27h-1.18zM143.59 0h1.18v4.27h-1.18zM167.76 0h1.18v4.27h-1.18zM191.94 0h1.18v4.27h-1.18zM216.11 0h1.18v4.27h-1.18zM240.28 0h1.18v4.27h-1.18zM264.46 0h1.18v4.27h-1.18zM288.63 0h1.18v4.27h-1.18zM312.81 0h1.18v4.27h-1.18zM25.05 22.04h4.49v1.18h-4.49zM17.06 22.04h4.49v1.18h-4.49zM22.72 16.39h1.18v4.49h-1.18zM22.72 24.38h1.18v4.49h-1.18zM49.23 22.04h4.49v1.18h-4.49zM41.24 22.04h4.49v1.18h-4.49zM46.89 16.39h1.18v4.49h-1.18zM46.89 24.38h1.18v4.49h-1.18zM73.4 22.04h4.49v1.18H73.4zM65.41 22.04h4.49v1.18h-4.49zM71.06 16.39h1.18v4.49h-1.18zM71.06 24.38h1.18v4.49h-1.18zM97.58 22.04h4.49v1.18h-4.49zM89.59 22.04h4.49v1.18h-4.49zM95.24 16.39h1.18v4.49h-1.18zM95.24 24.38h1.18v4.49h-1.18zM121.75 22.04h4.49v1.18h-4.49zM113.76 22.04h4.49v1.18h-4.49zM119.41 16.39h1.18v4.49h-1.18zM119.41 24.38h1.18v4.49h-1.18zM145.92 22.04h4.49v1.18h-4.49zM137.93 22.04h4.49v1.18h-4.49zM143.59 16.39h1.18v4.49h-1.18zM143.59 24.38h1.18v4.49h-1.18zM170.1 22.04h4.49v1.18h-4.49zM162.11 22.04h4.49v1.18h-4.49zM167.76 16.39h1.18v4.49h-1.18zM167.76 24.38h1.18v4.49h-1.18zM194.27 22.04h4.49v1.18h-4.49zM186.28 22.04h4.49v1.18h-4.49zM191.94 16.39h1.18v4.49h-1.18zM191.94 24.38h1.18v4.49h-1.18zM218.45 22.04h4.49v1.18h-4.49zM210.46 22.04h4.49v1.18h-4.49zM216.11 16.39h1.18v4.49h-1.18zM216.11 24.38h1.18v4.49h-1.18zM242.62 22.04h4.49v1.18h-4.49zM234.63 22.04h4.49v1.18h-4.49zM240.28 16.39h1.18v4.49h-1.18zM240.28 24.38h1.18v4.49h-1.18zM266.79 22.04h4.49v1.18h-4.49zM258.81 22.04h4.49v1.18h-4.49zM264.46 16.39h1.18v4.49h-1.18zM264.46 24.38h1.18v4.49h-1.18zM290.97 22.04h4.49v1.18h-4.49zM282.98 22.04h4.49v1.18h-4.49zM288.63 16.39h1.18v4.49h-1.18zM288.63 24.38h1.18v4.49h-1.18zM315.14 22.04h4.49v1.18h-4.49zM307.15 22.04h4.49v1.18h-4.49zM312.81 16.39h1.18v4.49h-1.18zM312.81 24.38h1.18v4.49h-1.18zM25.05 46.64h4.49v1.18h-4.49zM17.06 46.64h4.49v1.18h-4.49zM22.72 40.99h1.18v4.49h-1.18zM22.72 48.98h1.18v4.49h-1.18zM49.23 46.64h4.49v1.18h-4.49zM41.24 46.64h4.49v1.18h-4.49zM46.89 40.99h1.18v4.49h-1.18zM46.89 48.98h1.18v4.49h-1.18zM73.4 46.64h4.49v1.18H73.4zM65.41 46.64h4.49v1.18h-4.49zM71.06 40.99h1.18v4.49h-1.18zM71.06 48.98h1.18v4.49h-1.18zM97.58 46.64h4.49v1.18h-4.49zM89.59 46.64h4.49v1.18h-4.49zM95.24 40.99h1.18v4.49h-1.18zM95.24 48.98h1.18v4.49h-1.18zM121.75 46.64h4.49v1.18h-4.49zM113.76 46.64h4.49v1.18h-4.49zM119.41 40.99h1.18v4.49h-1.18zM119.41 48.98h1.18v4.49h-1.18zM145.92 46.64h4.49v1.18h-4.49zM137.93 46.64h4.49v1.18h-4.49zM143.59 40.99h1.18v4.49h-1.18zM143.59 48.98h1.18v4.49h-1.18zM170.1 46.64h4.49v1.18h-4.49zM162.11 46.64h4.49v1.18h-4.49zM167.76 40.99h1.18v4.49h-1.18zM167.76 48.98h1.18v4.49h-1.18zM194.27 46.64h4.49v1.18h-4.49zM186.28 46.64h4.49v1.18h-4.49zM191.94 40.99h1.18v4.49h-1.18zM191.94 48.98h1.18v4.49h-1.18zM218.45 46.64h4.49v1.18h-4.49zM210.46 46.64h4.49v1.18h-4.49zM216.11 40.99h1.18v4.49h-1.18zM216.11 48.98h1.18v4.49h-1.18zM242.62 46.64h4.49v1.18h-4.49zM234.63 46.64h4.49v1.18h-4.49zM240.28 40.99h1.18v4.49h-1.18zM240.28 48.98h1.18v4.49h-1.18zM266.79 46.64h4.49v1.18h-4.49zM258.81 46.64h4.49v1.18h-4.49zM264.46 40.99h1.18v4.49h-1.18zM264.46 48.98h1.18v4.49h-1.18zM290.97 46.64h4.49v1.18h-4.49zM282.98 46.64h4.49v1.18h-4.49zM288.63 40.99h1.18v4.49h-1.18zM288.63 48.98h1.18v4.49h-1.18zM315.14 46.64h4.49v1.18h-4.49zM307.15 46.64h4.49v1.18h-4.49zM312.81 40.99h1.18v4.49h-1.18zM312.81 48.98h1.18v4.49h-1.18zM25.05 71.24h4.49v1.18h-4.49zM17.06 71.24h4.49v1.18h-4.49zM22.72 65.59h1.18v4.49h-1.18zM22.72 73.57h1.18v4.49h-1.18zM49.23 71.24h4.49v1.18h-4.49zM41.24 71.24h4.49v1.18h-4.49zM46.89 65.59h1.18v4.49h-1.18zM46.89 73.57h1.18v4.49h-1.18zM73.4 71.24h4.49v1.18H73.4zM65.41 71.24h4.49v1.18h-4.49zM71.06 65.59h1.18v4.49h-1.18zM71.06 73.57h1.18v4.49h-1.18zM97.58 71.24h4.49v1.18h-4.49zM89.59 71.24h4.49v1.18h-4.49zM95.24 65.59h1.18v4.49h-1.18zM95.24 73.57h1.18v4.49h-1.18zM121.75 71.24h4.49v1.18h-4.49zM113.76 71.24h4.49v1.18h-4.49zM119.41 65.59h1.18v4.49h-1.18zM119.41 73.57h1.18v4.49h-1.18zM145.92 71.24h4.49v1.18h-4.49zM137.93 71.24h4.49v1.18h-4.49zM143.59 65.59h1.18v4.49h-1.18zM143.59 73.57h1.18v4.49h-1.18zM170.1 71.24h4.49v1.18h-4.49zM162.11 71.24h4.49v1.18h-4.49zM167.76 65.59h1.18v4.49h-1.18zM167.76 73.57h1.18v4.49h-1.18zM194.27 71.24h4.49v1.18h-4.49zM186.28 71.24h4.49v1.18h-4.49zM191.94 65.59h1.18v4.49h-1.18zM191.94 73.57h1.18v4.49h-1.18zM218.45 71.24h4.49v1.18h-4.49zM210.46 71.24h4.49v1.18h-4.49zM216.11 65.59h1.18v4.49h-1.18zM216.11 73.57h1.18v4.49h-1.18zM242.62 71.24h4.49v1.18h-4.49zM234.63 71.24h4.49v1.18h-4.49zM240.28 65.59h1.18v4.49h-1.18zM240.28 73.57h1.18v4.49h-1.18zM266.79 71.24h4.49v1.18h-4.49zM258.81 71.24h4.49v1.18h-4.49zM264.46 65.59h1.18v4.49h-1.18zM264.46 73.57h1.18v4.49h-1.18zM290.97 71.24h4.49v1.18h-4.49zM282.98 71.24h4.49v1.18h-4.49zM288.63 65.59h1.18v4.49h-1.18zM288.63 73.57h1.18v4.49h-1.18zM315.14 71.24h4.49v1.18h-4.49zM307.15 71.24h4.49v1.18h-4.49zM312.81 65.59h1.18v4.49h-1.18zM312.81 73.57h1.18v4.49h-1.18zM25.05 95.83h4.49v1.18h-4.49zM17.06 95.83h4.49v1.18h-4.49zM22.72 90.18h1.18v4.49h-1.18zM22.72 98.17h1.18v4.49h-1.18zM49.23 95.83h4.49v1.18h-4.49zM41.24 95.83h4.49v1.18h-4.49zM46.89 90.18h1.18v4.49h-1.18zM46.89 98.17h1.18v4.49h-1.18zM73.4 95.83h4.49v1.18H73.4zM65.41 95.83h4.49v1.18h-4.49zM71.06 90.18h1.18v4.49h-1.18zM71.06 98.17h1.18v4.49h-1.18zM97.58 95.83h4.49v1.18h-4.49zM89.59 95.83h4.49v1.18h-4.49zM95.24 90.18h1.18v4.49h-1.18zM95.24 98.17h1.18v4.49h-1.18zM121.75 95.83h4.49v1.18h-4.49zM113.76 95.83h4.49v1.18h-4.49zM119.41 90.18h1.18v4.49h-1.18zM119.41 98.17h1.18v4.49h-1.18zM145.92 95.83h4.49v1.18h-4.49zM137.93 95.83h4.49v1.18h-4.49zM143.59 90.18h1.18v4.49h-1.18zM143.59 98.17h1.18v4.49h-1.18zM170.1 95.83h4.49v1.18h-4.49zM162.11 95.83h4.49v1.18h-4.49zM167.76 90.18h1.18v4.49h-1.18zM167.76 98.17h1.18v4.49h-1.18zM194.27 95.83h4.49v1.18h-4.49zM186.28 95.83h4.49v1.18h-4.49zM191.94 90.18h1.18v4.49h-1.18zM191.94 98.17h1.18v4.49h-1.18zM218.45 95.83h4.49v1.18h-4.49zM210.46 95.83h4.49v1.18h-4.49zM216.11 90.18h1.18v4.49h-1.18zM216.11 98.17h1.18v4.49h-1.18zM242.62 95.83h4.49v1.18h-4.49zM234.63 95.83h4.49v1.18h-4.49zM240.28 90.18h1.18v4.49h-1.18zM240.28 98.17h1.18v4.49h-1.18zM266.79 95.83h4.49v1.18h-4.49zM258.81 95.83h4.49v1.18h-4.49zM264.46 90.18h1.18v4.49h-1.18zM264.46 98.17h1.18v4.49h-1.18zM290.97 95.83h4.49v1.18h-4.49zM282.98 95.83h4.49v1.18h-4.49zM288.63 90.18h1.18v4.49h-1.18zM288.63 98.17h1.18v4.49h-1.18zM315.14 95.83h4.49v1.18h-4.49zM307.15 95.83h4.49v1.18h-4.49zM312.81 90.18h1.18v4.49h-1.18zM312.81 98.17h1.18v4.49h-1.18zM2.71 121.61h2.66v-1.18H2.85l-.14 1.18zM25.05 120.43h4.49v1.18h-4.49zM17.06 120.43h4.49v1.18h-4.49zM22.72 114.78h1.18v4.49h-1.18zM22.72 122.77h1.18v4.49h-1.18zM49.23 120.43h4.49v1.18h-4.49zM41.24 120.43h4.49v1.18h-4.49zM46.89 114.78h1.18v4.49h-1.18zM46.89 122.77h1.18v4.49h-1.18zM73.4 120.43h4.49v1.18H73.4zM65.41 120.43h4.49v1.18h-4.49zM71.06 114.78h1.18v4.49h-1.18zM71.06 122.77h1.18v4.49h-1.18zM97.58 120.43h4.49v1.18h-4.49zM89.59 120.43h4.49v1.18h-4.49zM95.24 114.78h1.18v4.49h-1.18zM95.24 122.77h1.18v4.49h-1.18zM121.75 120.43h4.49v1.18h-4.49zM113.76 120.43h4.49v1.18h-4.49zM119.41 114.78h1.18v4.49h-1.18zM119.41 122.77h1.18v4.49h-1.18zM145.92 120.43h4.49v1.18h-4.49zM137.93 120.43h4.49v1.18h-4.49zM143.59 114.78h1.18v4.49h-1.18zM143.59 122.77h1.18v4.49h-1.18zM170.1 120.43h4.49v1.18h-4.49zM162.11 120.43h4.49v1.18h-4.49zM167.76 114.78h1.18v4.49h-1.18zM167.76 122.77h1.18v4.49h-1.18zM194.27 120.43h4.49v1.18h-4.49zM186.28 120.43h4.49v1.18h-4.49zM191.94 114.78h1.18v4.49h-1.18zM191.94 122.77h1.18v4.49h-1.18zM218.45 120.43h4.49v1.18h-4.49zM210.46 120.43h4.49v1.18h-4.49zM216.11 114.78h1.18v4.49h-1.18zM216.11 122.77h1.18v4.49h-1.18zM242.62 120.43h4.49v1.18h-4.49zM234.63 120.43h4.49v1.18h-4.49zM240.28 114.78h1.18v4.49h-1.18zM240.28 122.77h1.18v4.49h-1.18zM266.79 120.43h4.49v1.18h-4.49zM258.81 120.43h4.49v1.18h-4.49zM264.46 114.78h1.18v4.49h-1.18zM264.46 122.77h1.18v4.49h-1.18zM290.97 120.43h4.49v1.18h-4.49zM282.98 120.43h4.49v1.18h-4.49zM288.63 114.78h1.18v4.49h-1.18zM288.63 122.77h1.18v4.49h-1.18zM315.14 120.43h4.49v1.18h-4.49zM307.15 120.43h4.49v1.18h-4.49zM312.81 114.78h1.18v4.49h-1.18zM312.81 122.77h1.18v4.49h-1.18zM22.72 139.38h1.18v4.27h-1.18zM46.89 139.38h1.18v4.27h-1.18zM71.06 139.38h1.18v4.27h-1.18zM95.24 139.38h1.18v4.27h-1.18zM119.41 139.38h1.18v4.27h-1.18zM143.59 139.38h1.18v4.27h-1.18zM167.76 139.38h1.18v4.27h-1.18zM191.94 139.38h1.18v4.27h-1.18zM216.11 139.38h1.18v4.27h-1.18zM240.28 139.38h1.18v4.27h-1.18zM264.46 139.38h1.18v4.27h-1.18zM288.63 139.38h1.18v4.27h-1.18zM312.81 139.38h1.18v4.27h-1.18zM481.96 21.94h1.38v1.38h-1.38zM554.48 21.94h1.38v1.38h-1.38zM409.43 21.94h1.38v1.38h-1.38zM409.43 120.33h1.38v1.38h-1.38zM409.43 46.54h1.38v1.38h-1.38zM409.43 71.14h1.38v1.38h-1.38zM409.43 95.73h1.38v1.38h-1.38zM578.66 21.94h1.38v1.38h-1.38zM385.26 120.33h1.38v1.38h-1.38zM554.48 95.73h1.38v1.38h-1.38zM554.48 71.14h1.38v1.38h-1.38zM554.48 120.33h1.38v1.38h-1.38zM385.26 95.73h1.38v1.38h-1.38zM385.26 21.94h1.38v1.38h-1.38zM554.48 46.54h1.38v1.38h-1.38zM385.26 71.14h1.38v1.38h-1.38zM385.26 46.54h1.38v1.38h-1.38zM602.83 46.54h1.38v1.38h-1.38zM602.83 21.94h1.38v1.38h-1.38zM530.31 71.14h1.38v1.38h-1.38zM433.61 21.94h1.38v1.38h-1.38zM433.61 46.54h1.38v1.38h-1.38zM627 21.94h1.38v1.38H627zM602.83 120.33h1.38v1.38h-1.38zM602.83 71.14h1.38v1.38h-1.38zM602.83 95.73h1.38v1.38h-1.38zM457.78 120.33h1.38v1.38h-1.38zM457.78 95.73h1.38v1.38h-1.38zM457.78 21.94h1.38v1.38h-1.38zM457.78 71.14h1.38v1.38h-1.38zM457.78 46.54h1.38v1.38h-1.38zM627 95.73h1.38v1.38H627zM481.96 46.54h1.38v1.38h-1.38zM481.96 71.14h1.38v1.38h-1.38zM481.96 95.73h1.38v1.38h-1.38zM481.96 120.33h1.38v1.38h-1.38zM627 120.33h1.38v1.38H627zM530.31 46.54h1.38v1.38h-1.38zM530.31 21.94h1.38v1.38h-1.38zM627 71.14h1.38v1.38H627zM627 46.54h1.38v1.38H627zM433.61 95.73h1.38v1.38h-1.38zM433.61 71.14h1.38v1.38h-1.38zM433.61 120.33h1.38v1.38h-1.38zM578.66 95.73h1.38v1.38h-1.38zM336.91 120.33h1.38v1.38h-1.38zM361.09 21.94h1.38v1.38h-1.38zM506.13 46.54h1.38v1.38h-1.38zM361.09 46.54h1.38v1.38h-1.38zM361.09 71.14h1.38v1.38h-1.38zM336.91 95.73h1.38v1.38h-1.38zM336.91 71.14h1.38v1.38h-1.38zM336.91 46.54h1.38v1.38h-1.38zM361.09 95.73h1.38v1.38h-1.38zM361.09 120.33h1.38v1.38h-1.38zM578.66 120.33h1.38v1.38h-1.38zM336.91 21.94h1.38v1.38h-1.38zM506.13 95.73h1.38v1.38h-1.38zM506.13 21.94h1.38v1.38h-1.38zM506.13 120.33h1.38v1.38h-1.38zM578.66 46.54h1.38v1.38h-1.38zM530.31 120.33h1.38v1.38h-1.38zM530.31 95.73h1.38v1.38h-1.38zM578.66 71.14h1.38v1.38h-1.38zM506.13 71.14h1.38v1.38h-1.38zM337.01 0h1.18v4.27h-1.18zM361.19 0h1.18v4.27h-1.18zM385.36 0h1.18v4.27h-1.18zM409.54 0h1.18v4.27h-1.18zM433.71 0h1.18v4.27h-1.18zM457.88 0h1.18v4.27h-1.18zM482.06 0h1.18v4.27h-1.18zM506.23 0h1.18v4.27h-1.18zM530.41 0h1.18v4.27h-1.18zM554.58 0h1.18v4.27h-1.18zM578.76 0h1.18v4.27h-1.18zM602.93 0h1.18v4.27h-1.18zM627.1 0h1.18v4.27h-1.18zM339.35 22.04h4.49v1.18h-4.49zM331.36 22.04h4.49v1.18h-4.49zM337.01 16.39h1.18v4.49h-1.18zM337.01 24.38h1.18v4.49h-1.18zM363.52 22.04h4.49v1.18h-4.49zM355.53 22.04h4.49v1.18h-4.49zM361.19 16.39h1.18v4.49h-1.18zM361.19 24.38h1.18v4.49h-1.18zM387.7 22.04h4.49v1.18h-4.49zM379.71 22.04h4.49v1.18h-4.49zM385.36 16.39h1.18v4.49h-1.18zM385.36 24.38h1.18v4.49h-1.18zM411.87 22.04h4.49v1.18h-4.49zM403.88 22.04h4.49v1.18h-4.49zM409.54 16.39h1.18v4.49h-1.18zM409.54 24.38h1.18v4.49h-1.18zM436.05 22.04h4.49v1.18h-4.49zM428.06 22.04h4.49v1.18h-4.49zM433.71 16.39h1.18v4.49h-1.18zM433.71 24.38h1.18v4.49h-1.18zM460.22 22.04h4.49v1.18h-4.49zM452.23 22.04h4.49v1.18h-4.49zM457.88 16.39h1.18v4.49h-1.18zM457.88 24.38h1.18v4.49h-1.18zM484.39 22.04h4.49v1.18h-4.49zM476.41 22.04h4.49v1.18h-4.49zM482.06 16.39h1.18v4.49h-1.18zM482.06 24.38h1.18v4.49h-1.18zM508.57 22.04h4.49v1.18h-4.49zM500.58 22.04h4.49v1.18h-4.49zM506.23 16.39h1.18v4.49h-1.18zM506.23 24.38h1.18v4.49h-1.18zM532.74 22.04h4.49v1.18h-4.49zM524.75 22.04h4.49v1.18h-4.49zM530.41 16.39h1.18v4.49h-1.18zM530.41 24.38h1.18v4.49h-1.18zM556.92 22.04h4.49v1.18h-4.49zM548.93 22.04h4.49v1.18h-4.49zM554.58 16.39h1.18v4.49h-1.18zM554.58 24.38h1.18v4.49h-1.18zM581.09 22.04h4.49v1.18h-4.49zM573.1 22.04h4.49v1.18h-4.49zM578.76 16.39h1.18v4.49h-1.18zM578.76 24.38h1.18v4.49h-1.18zM605.27 22.04h4.49v1.18h-4.49zM597.28 22.04h4.49v1.18h-4.49zM602.93 16.39h1.18v4.49h-1.18zM602.93 24.38h1.18v4.49h-1.18zM629.44 22.04h4.49v1.18h-4.49zM621.45 22.04h4.49v1.18h-4.49zM627.1 16.39h1.18v4.49h-1.18zM627.1 24.38h1.18v4.49h-1.18zM645.63 22.04v1.18h2.51l.15-1.18h-2.66zM339.35 46.64h4.49v1.18h-4.49zM331.36 46.64h4.49v1.18h-4.49zM337.01 40.99h1.18v4.49h-1.18zM337.01 48.98h1.18v4.49h-1.18zM363.52 46.64h4.49v1.18h-4.49zM355.53 46.64h4.49v1.18h-4.49zM361.19 40.99h1.18v4.49h-1.18zM361.19 48.98h1.18v4.49h-1.18zM387.7 46.64h4.49v1.18h-4.49zM379.71 46.64h4.49v1.18h-4.49zM385.36 40.99h1.18v4.49h-1.18zM385.36 48.98h1.18v4.49h-1.18zM411.87 46.64h4.49v1.18h-4.49zM403.88 46.64h4.49v1.18h-4.49zM409.54 40.99h1.18v4.49h-1.18zM409.54 48.98h1.18v4.49h-1.18zM436.05 46.64h4.49v1.18h-4.49zM428.06 46.64h4.49v1.18h-4.49zM433.71 40.99h1.18v4.49h-1.18zM433.71 48.98h1.18v4.49h-1.18zM460.22 46.64h4.49v1.18h-4.49zM452.23 46.64h4.49v1.18h-4.49zM457.88 40.99h1.18v4.49h-1.18zM457.88 48.98h1.18v4.49h-1.18zM484.39 46.64h4.49v1.18h-4.49zM476.41 46.64h4.49v1.18h-4.49zM482.06 40.99h1.18v4.49h-1.18zM482.06 48.98h1.18v4.49h-1.18zM508.57 46.64h4.49v1.18h-4.49zM500.58 46.64h4.49v1.18h-4.49zM506.23 40.99h1.18v4.49h-1.18zM506.23 48.98h1.18v4.49h-1.18zM532.74 46.64h4.49v1.18h-4.49zM524.75 46.64h4.49v1.18h-4.49zM530.41 40.99h1.18v4.49h-1.18zM530.41 48.98h1.18v4.49h-1.18zM556.92 46.64h4.49v1.18h-4.49zM548.93 46.64h4.49v1.18h-4.49zM554.58 40.99h1.18v4.49h-1.18zM554.58 48.98h1.18v4.49h-1.18zM581.09 46.64h4.49v1.18h-4.49zM573.1 46.64h4.49v1.18h-4.49zM578.76 40.99h1.18v4.49h-1.18zM578.76 48.98h1.18v4.49h-1.18zM605.27 46.64h4.49v1.18h-4.49zM597.28 46.64h4.49v1.18h-4.49zM602.93 40.99h1.18v4.49h-1.18zM602.93 48.98h1.18v4.49h-1.18zM629.44 46.64h4.49v1.18h-4.49zM621.45 46.64h4.49v1.18h-4.49zM627.1 40.99h1.18v4.49h-1.18zM627.1 48.98h1.18v4.49h-1.18zM339.35 71.24h4.49v1.18h-4.49zM331.36 71.24h4.49v1.18h-4.49zM337.01 65.59h1.18v4.49h-1.18zM337.01 73.57h1.18v4.49h-1.18zM363.52 71.24h4.49v1.18h-4.49zM355.53 71.24h4.49v1.18h-4.49zM361.19 65.59h1.18v4.49h-1.18zM361.19 73.57h1.18v4.49h-1.18zM387.7 71.24h4.49v1.18h-4.49zM379.71 71.24h4.49v1.18h-4.49zM385.36 65.59h1.18v4.49h-1.18zM385.36 73.57h1.18v4.49h-1.18zM411.87 71.24h4.49v1.18h-4.49zM403.88 71.24h4.49v1.18h-4.49zM409.54 65.59h1.18v4.49h-1.18zM409.54 73.57h1.18v4.49h-1.18zM436.05 71.24h4.49v1.18h-4.49zM428.06 71.24h4.49v1.18h-4.49zM433.71 65.59h1.18v4.49h-1.18zM433.71 73.57h1.18v4.49h-1.18zM460.22 71.24h4.49v1.18h-4.49zM452.23 71.24h4.49v1.18h-4.49zM457.88 65.59h1.18v4.49h-1.18zM457.88 73.57h1.18v4.49h-1.18zM484.39 71.24h4.49v1.18h-4.49zM476.41 71.24h4.49v1.18h-4.49zM482.06 65.59h1.18v4.49h-1.18zM482.06 73.57h1.18v4.49h-1.18zM508.57 71.24h4.49v1.18h-4.49zM500.58 71.24h4.49v1.18h-4.49zM506.23 65.59h1.18v4.49h-1.18zM506.23 73.57h1.18v4.49h-1.18zM532.74 71.24h4.49v1.18h-4.49zM524.75 71.24h4.49v1.18h-4.49zM530.41 65.59h1.18v4.49h-1.18zM530.41 73.57h1.18v4.49h-1.18zM556.92 71.24h4.49v1.18h-4.49zM548.93 71.24h4.49v1.18h-4.49zM554.58 65.59h1.18v4.49h-1.18zM554.58 73.57h1.18v4.49h-1.18zM581.09 71.24h4.49v1.18h-4.49zM573.1 71.24h4.49v1.18h-4.49zM578.76 65.59h1.18v4.49h-1.18zM578.76 73.57h1.18v4.49h-1.18zM605.27 71.24h4.49v1.18h-4.49zM597.28 71.24h4.49v1.18h-4.49zM602.93 65.59h1.18v4.49h-1.18zM602.93 73.57h1.18v4.49h-1.18zM629.44 71.24h4.49v1.18h-4.49zM621.45 71.24h4.49v1.18h-4.49zM627.1 65.59h1.18v4.49h-1.18zM627.1 73.57h1.18v4.49h-1.18zM339.35 95.83h4.49v1.18h-4.49zM331.36 95.83h4.49v1.18h-4.49zM337.01 90.18h1.18v4.49h-1.18zM337.01 98.17h1.18v4.49h-1.18zM363.52 95.83h4.49v1.18h-4.49zM355.53 95.83h4.49v1.18h-4.49zM361.19 90.18h1.18v4.49h-1.18zM361.19 98.17h1.18v4.49h-1.18zM387.7 95.83h4.49v1.18h-4.49zM379.71 95.83h4.49v1.18h-4.49zM385.36 90.18h1.18v4.49h-1.18zM385.36 98.17h1.18v4.49h-1.18zM411.87 95.83h4.49v1.18h-4.49zM403.88 95.83h4.49v1.18h-4.49zM409.54 90.18h1.18v4.49h-1.18zM409.54 98.17h1.18v4.49h-1.18zM436.05 95.83h4.49v1.18h-4.49zM428.06 95.83h4.49v1.18h-4.49zM433.71 90.18h1.18v4.49h-1.18zM433.71 98.17h1.18v4.49h-1.18zM460.22 95.83h4.49v1.18h-4.49zM452.23 95.83h4.49v1.18h-4.49zM457.88 90.18h1.18v4.49h-1.18zM457.88 98.17h1.18v4.49h-1.18zM484.39 95.83h4.49v1.18h-4.49zM476.41 95.83h4.49v1.18h-4.49zM482.06 90.18h1.18v4.49h-1.18zM482.06 98.17h1.18v4.49h-1.18zM508.57 95.83h4.49v1.18h-4.49zM500.58 95.83h4.49v1.18h-4.49zM506.23 90.18h1.18v4.49h-1.18zM506.23 98.17h1.18v4.49h-1.18zM532.74 95.83h4.49v1.18h-4.49zM524.75 95.83h4.49v1.18h-4.49zM530.41 90.18h1.18v4.49h-1.18zM530.41 98.17h1.18v4.49h-1.18zM556.92 95.83h4.49v1.18h-4.49zM548.93 95.83h4.49v1.18h-4.49zM554.58 90.18h1.18v4.49h-1.18zM554.58 98.17h1.18v4.49h-1.18zM581.09 95.83h4.49v1.18h-4.49zM573.1 95.83h4.49v1.18h-4.49zM578.76 90.18h1.18v4.49h-1.18zM578.76 98.17h1.18v4.49h-1.18zM605.27 95.83h4.49v1.18h-4.49zM597.28 95.83h4.49v1.18h-4.49zM602.93 90.18h1.18v4.49h-1.18zM602.93 98.17h1.18v4.49h-1.18zM629.44 95.83h4.49v1.18h-4.49zM621.45 95.83h4.49v1.18h-4.49zM627.1 90.18h1.18v4.49h-1.18zM627.1 98.17h1.18v4.49h-1.18zM339.35 120.43h4.49v1.18h-4.49zM331.36 120.43h4.49v1.18h-4.49zM337.01 114.78h1.18v4.49h-1.18zM337.01 122.77h1.18v4.49h-1.18zM363.52 120.43h4.49v1.18h-4.49zM355.53 120.43h4.49v1.18h-4.49zM361.19 114.78h1.18v4.49h-1.18zM361.19 122.77h1.18v4.49h-1.18zM387.7 120.43h4.49v1.18h-4.49zM379.71 120.43h4.49v1.18h-4.49zM385.36 114.78h1.18v4.49h-1.18zM385.36 122.77h1.18v4.49h-1.18zM411.87 120.43h4.49v1.18h-4.49zM403.88 120.43h4.49v1.18h-4.49zM409.54 114.78h1.18v4.49h-1.18zM409.54 122.77h1.18v4.49h-1.18zM436.05 120.43h4.49v1.18h-4.49zM428.06 120.43h4.49v1.18h-4.49zM433.71 114.78h1.18v4.49h-1.18zM433.71 122.77h1.18v4.49h-1.18zM460.22 120.43h4.49v1.18h-4.49zM452.23 120.43h4.49v1.18h-4.49zM457.88 114.78h1.18v4.49h-1.18zM457.88 122.77h1.18v4.49h-1.18zM484.39 120.43h4.49v1.18h-4.49zM476.41 120.43h4.49v1.18h-4.49zM482.06 114.78h1.18v4.49h-1.18zM482.06 122.77h1.18v4.49h-1.18zM508.57 120.43h4.49v1.18h-4.49zM500.58 120.43h4.49v1.18h-4.49zM506.23 114.78h1.18v4.49h-1.18zM506.23 122.77h1.18v4.49h-1.18zM532.74 120.43h4.49v1.18h-4.49zM524.75 120.43h4.49v1.18h-4.49zM530.41 114.78h1.18v4.49h-1.18zM530.41 122.77h1.18v4.49h-1.18zM556.92 120.43h4.49v1.18h-4.49zM548.93 120.43h4.49v1.18h-4.49zM554.58 114.78h1.18v4.49h-1.18zM554.58 122.77h1.18v4.49h-1.18zM581.09 120.43h4.49v1.18h-4.49zM573.1 120.43h4.49v1.18h-4.49zM578.76 114.78h1.18v4.49h-1.18zM578.76 122.77h1.18v4.49h-1.18zM605.27 120.43h4.49v1.18h-4.49zM597.28 120.43h4.49v1.18h-4.49zM602.93 114.78h1.18v4.49h-1.18zM602.93 122.77h1.18v4.49h-1.18zM629.44 120.43h4.49v1.18h-4.49zM621.45 120.43h4.49v1.18h-4.49zM627.1 114.78h1.18v4.49h-1.18zM627.1 122.77h1.18v4.49h-1.18zM337.01 139.38h1.18v4.27h-1.18zM361.19 139.38h1.18v4.27h-1.18zM385.36 139.38h1.18v4.27h-1.18zM409.54 139.38h1.18v4.27h-1.18zM433.71 139.38h1.18v4.27h-1.18zM457.88 139.38h1.18v4.27h-1.18zM482.06 139.38h1.18v4.27h-1.18zM506.23 139.38h1.18v4.27h-1.18zM530.41 139.38h1.18v4.27h-1.18zM554.58 139.38h1.18v4.27h-1.18zM578.76 139.38h1.18v4.27h-1.18zM602.93 139.38h1.18v4.27h-1.18zM627.1 139.38h1.18v4.27h-1.18z'/%3E%3C/svg%3E"); }
+    @media only screen and (max-width: 768px) {
+      .bonus__partners-tabs-list::before {
+        bottom: -10px; } }
     @media only screen and (max-width: 1200px) {
       .bonus__partners-tabs-list::before {
         display: none; } }
@@ -2007,13 +2111,15 @@ footer {
   padding: 14px 55px;
   align-self: center;
   margin-top: 40px;
+  position: relative;
+  z-index: 30;
   box-shadow: 0px 15px 60px rgba(0, 0, 0, 0.3); }
   @media only screen and (max-width: 968px) {
     .bonus__partners-tabs-hide-btn {
       margin-top: 0; } }
   @media only screen and (max-width: 768px) {
     .bonus__partners-tabs-hide-btn {
-      margin-top: 30px; } }
+      margin-top: 15px; } }
   .bonus__partners-tabs-hide-btn.hidden {
     display: none; }
 
@@ -2178,6 +2284,12 @@ footer {
   @media only screen and (max-width: 1200px) {
     .qa {
       padding-bottom: 170px; } }
+  @media only screen and (max-width: 768px) {
+    .qa {
+      margin-top: 15px;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 80px; } }
   .qa::after {
     content: '';
     z-index: -1;
@@ -2196,6 +2308,9 @@ footer {
   display: flex;
   align-items: flex-end;
   justify-content: space-between; }
+  @media only screen and (max-width: 768px) {
+    .qa__top-section {
+      display: contents; } }
 
 .qa__heading-small-text {
   color: #B9B9B9;
@@ -2207,6 +2322,9 @@ footer {
   @media only screen and (max-width: 968px) {
     .qa__heading-small-text {
       font-size: 25px; } }
+  @media only screen and (max-width: 768px) {
+    .qa__heading-small-text {
+      font-size: 22px; } }
 
 .qa__heading-large-text {
   color: #4B4D53;
@@ -2223,6 +2341,10 @@ footer {
     .qa__heading-large-text {
       font-size: 60px;
       line-height: 60px; } }
+  @media only screen and (max-width: 768px) {
+    .qa__heading-large-text {
+      font-size: 38px;
+      line-height: 38px; } }
 
 .qa__ask-question-btn {
   color: #4B4D53;
@@ -2236,14 +2358,22 @@ footer {
   border: 2px solid #D81E23;
   padding: 8px 10px;
   margin-bottom: 20px;
-  margin-right: 100px; }
+  margin-right: 100px;
+  order: 10; }
   .qa__ask-question-btn:link, .qa__ask-question-btn:visited {
     color: #4B4D53; }
+  @media only screen and (max-width: 768px) {
+    .qa__ask-question-btn {
+      margin: 0;
+      margin-top: 50px; } }
 
 .qa__ask-question-btn-content {
   background-color: #fff;
   padding: 5px 10px;
   margin-right: -100px; }
+  @media only screen and (max-width: 768px) {
+    .qa__ask-question-btn-content {
+      margin: 0; } }
 
 .qa__accordeons-open-btn {
   display: flex;
@@ -2254,6 +2384,10 @@ footer {
   @media only screen and (max-width: 968px) {
     .qa__accordeons-open-btn {
       font-size: 22px; } }
+  @media only screen and (max-width: 768px) {
+    .qa__accordeons-open-btn {
+      font-size: 16px;
+      line-height: 24px; } }
 
 .qa__accordeons-cross {
   margin-top: 10px;
@@ -2265,6 +2399,9 @@ footer {
   @media only screen and (max-width: 968px) {
     .qa__accordeons-cross {
       margin-top: 2px; } }
+  @media only screen and (max-width: 768px) {
+    .qa__accordeons-cross {
+      margin-right: 10px; } }
   .qa__accordeons-cross > span {
     width: 100%;
     height: 4px;
@@ -2304,10 +2441,18 @@ footer {
     .qa__accordeons-content {
       font-size: 16px;
       line-height: 24px; } }
+  @media only screen and (max-width: 768px) {
+    .qa__accordeons-content {
+      padding-left: 30px;
+      font-size: 14px;
+      line-height: 21px; } }
   .qa__accordeons-content p {
     margin-bottom: 20px; }
     .qa__accordeons-content p:first-child {
       padding-top: 15px; }
+      @media only screen and (max-width: 768px) {
+        .qa__accordeons-content p:first-child {
+          padding-top: 5px; } }
     .qa__accordeons-content p:last-child {
       margin-bottom: 0; }
 
@@ -2316,6 +2461,9 @@ footer {
 
 .qa__accordeons-list-item {
   margin-bottom: 30px; }
+  @media only screen and (max-width: 768px) {
+    .qa__accordeons-list-item {
+      margin-bottom: 20px; } }
   .qa__accordeons-list-item:last-child {
     margin-bottom: 0; }
 
@@ -2346,6 +2494,13 @@ footer {
   max-height: 100%;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch; }
+  @media only screen and (max-width: 968px) {
+    .modals__qa-modal-content {
+      flex-direction: column;
+      max-width: 800px; } }
+  @media only screen and (max-width: 768px) {
+    .modals__qa-modal-content {
+      padding: 40px 20px; } }
 
 .modals__qa-modal-heading-small-text {
   color: #B9B9B9;
@@ -2354,6 +2509,14 @@ footer {
   line-height: 40px;
   letter-spacing: .25px;
   display: block; }
+  @media only screen and (max-width: 968px) {
+    .modals__qa-modal-heading-small-text {
+      font-size: 25px;
+      line-height: 40px; } }
+  @media only screen and (max-width: 768px) {
+    .modals__qa-modal-heading-small-text {
+      font-size: 22px;
+      line-height: 1.2; } }
 
 .modals__qa-modal-heading-large-text {
   color: #4B4D53;
@@ -2361,21 +2524,48 @@ footer {
   line-height: 115px;
   font-weight: 700;
   letter-spacing: .25px;
-  display: block; }
+  display: block;
+  position: relative;
+  left: -6px; }
+  @media only screen and (max-width: 1200px) {
+    .modals__qa-modal-heading-large-text {
+      font-size: 80px;
+      line-height: 90px;
+      left: -4px; } }
+  @media only screen and (max-width: 968px) {
+    .modals__qa-modal-heading-large-text {
+      font-size: 60px;
+      line-height: 60px; } }
+  @media only screen and (max-width: 768px) {
+    .modals__qa-modal-heading-large-text {
+      font-size: 38px;
+      line-height: 45px; } }
 
 .modals__qa-modal-content-left-column {
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content; }
+  @media only screen and (max-width: 968px) {
+    .modals__qa-modal-content-left-column {
+      width: 100%; } }
 
 .modals__qa-modal-content-right-column {
   width: 590px;
   margin-left: auto; }
+  @media only screen and (max-width: 968px) {
+    .modals__qa-modal-content-right-column {
+      margin-left: 0; } }
+  @media only screen and (max-width: 968px) {
+    .modals__qa-modal-content-right-column {
+      width: 100%; } }
 
 .modals__qa-form {
   margin: 0 -20px;
   display: flex;
   flex-wrap: wrap; }
+  @media only screen and (max-width: 968px) {
+    .modals__qa-form {
+      margin-top: 20px; } }
 
 .modals__qa-input-group {
   padding: 0 20px;
@@ -2385,6 +2575,12 @@ footer {
   margin-bottom: 20px; }
   .modals__qa-input-group--fullwidth {
     width: 100%; }
+  @media only screen and (max-width: 968px) {
+    .modals__qa-input-group {
+      margin-bottom: 10px; } }
+  @media only screen and (max-width: 768px) {
+    .modals__qa-input-group {
+      width: 100%; } }
 
 .modals__qa-submit-block {
   width: 100%;
@@ -2392,6 +2588,13 @@ footer {
   display: flex;
   align-items: center;
   margin-top: 40px; }
+  @media only screen and (max-width: 968px) {
+    .modals__qa-submit-block {
+      margin-top: 20px; } }
+  @media only screen and (max-width: 768px) {
+    .modals__qa-submit-block {
+      flex-direction: column;
+      align-items: stretch; } }
 
 .modals__qa-label {
   font-size: 16px;
@@ -2412,9 +2615,18 @@ footer {
   outline: none;
   padding: 11px 15px;
   background-color: transparent; }
+  @media only screen and (max-width: 968px) {
+    .modals__qa-input,
+    .modals__qa-textarea {
+      font-size: 16px;
+      line-height: 20px;
+      padding: 8px 10px; } }
 
 .modals__qa-textarea {
   height: 250px; }
+  @media only screen and (max-width: 968px) {
+    .modals__qa-textarea {
+      height: 150px; } }
 
 .modals__qa-submit-btn {
   background-color: #D81E23;
@@ -2426,6 +2638,9 @@ footer {
   padding: 14px 70px;
   font: inherit;
   margin-right: 35px; }
+  @media only screen and (max-width: 768px) {
+    .modals__qa-submit-btn {
+      margin-right: 0; } }
 
 .modals__qa-submit-text {
   width: 50%;
@@ -2433,12 +2648,25 @@ footer {
   color: #7E7E83;
   font-size: 14px;
   line-height: 21px; }
+  @media only screen and (max-width: 768px) {
+    .modals__qa-submit-text {
+      order: -1;
+      margin-bottom: 20px;
+      width: 100%; } }
 
 .modals__qa-model-help-text {
   font-size: 24px;
   line-height: 40px;
   font-weight: 300;
   color: #4B4D53; }
+  @media only screen and (max-width: 1200px) {
+    .modals__qa-model-help-text {
+      font-size: 20px;
+      line-height: 28px; } }
+  @media only screen and (max-width: 768px) {
+    .modals__qa-model-help-text {
+      font-size: 16px;
+      line-height: 1.4; } }
 
 .modals__qa-modal-close-btn {
   width: 35px;
@@ -2447,6 +2675,10 @@ footer {
   top: 80px;
   right: 80px;
   transform: rotate(45deg); }
+  @media only screen and (max-width: 968px) {
+    .modals__qa-modal-close-btn {
+      top: 40px;
+      right: 40px; } }
   .modals__qa-modal-close-btn > span {
     height: 4px;
     width: 30px;

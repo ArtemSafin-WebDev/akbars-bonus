@@ -3,9 +3,11 @@
   "version": "1.0.0",
   "description": "Modern boilerplate with Gulp and Webpack",
   "main": "main.js",
+  "homepage": "https://github.com/ArtemSafin-WebDev/akbars-bonus",
   "scripts": {
     "build": "gulp build-production",
-    "dev": "gulp build && gulp serve"
+    "dev": "gulp build && gulp serve",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
@@ -17,10 +19,11 @@
     "not dead"
   ],
   "dependencies": {
-    "body-scroll-lock": "^2.6.1",
+    "body-scroll-lock": "^2.6.4",
     "classlist-polyfill": "^1.2.0",
     "core-js": "^3.1.4",
     "detect-it": "^3.0.5",
+    "gh-pages": "^2.1.0",
     "gulp-prettier": "^2.1.0",
     "imagesloaded": "^4.1.4",
     "jquery": "^3.3.1",

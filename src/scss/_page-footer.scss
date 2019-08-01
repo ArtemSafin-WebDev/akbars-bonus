@@ -19,6 +19,11 @@
         background-color: $dark-grey;
         z-index: -1;
     }
+    @include breakpoint(mobile) {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 30px 0;
+    }
 }
 
 
@@ -36,6 +41,9 @@
         left: calc((100vw - 100%) / 2 * -1);
         background-color: #ECECEF;
         z-index: -1;
+        @include breakpoint(mobile) {
+            height: 126px;
+        }
     }
 }
 
@@ -45,16 +53,30 @@
     font-size: 16px;
     line-height: 24px;
     margin-right: 40px;
+    @include breakpoint(mobile) {
+        margin-bottom: 15px;
+    }
     &:last-child {
         margin-right: 0;
+        @include breakpoint(mobile) {
+            margin-bottom: 0;
+        }
     }
     &:link,
     &:visited {
         color: white;
     }
 
+    &:hover {
+        text-decoration: underline;
+    }
+
     &--akbars {
         margin-left: auto;
+        @include breakpoint(mobile) {
+            margin-left: 0;
+            margin-top: 10px;
+        }
     }
 }
 
@@ -65,7 +87,7 @@
     line-height: 115px;
     font-weight: 700;
     letter-spacing: .25px;
-    text-shadow: 0px 15px 60px rgba(black, .3);
+    text-shadow: 0px 15px 60px rgba(white, .3);
     text-transform: uppercase;
     position: relative;
     z-index: 1;
@@ -76,6 +98,10 @@
     @include breakpoint(small-tablet) {
         font-size: 60px;
         line-height: 60px;
+    }
+    @include breakpoint(mobile) {
+        font-size: 38px;
+        line-height: 45px;
     }
     &::before {
         content: '#';
@@ -92,6 +118,10 @@
             font-size: 300px;
             top: -220px;
             left: -40px;
+        }
+        @include breakpoint(mobile) {
+            font-size: 190px;
+            top: -255px;
         }
 
     }
@@ -118,6 +148,13 @@
         margin-top: 90px;
         margin-bottom: 72px;
     }
+    @include breakpoint(mobile) {
+        margin-bottom: 45px;
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 45px;
+    }
     &:link,
     &:visited {
         color: white;
@@ -140,6 +177,12 @@
     @include breakpoint(small-tablet) {
         width: 360px;
         bottom: -50px;
+    }
+    @include breakpoint(small-tablet) {
+        position: static;
+        width: 100%;
+        height: auto;
+        margin-bottom: -60px;
     }
 }
 

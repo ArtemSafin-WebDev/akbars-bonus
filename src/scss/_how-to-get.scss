@@ -239,3 +239,54 @@
 
     
 }
+
+
+
+
+.how-to-get__stages-slider {
+    @include breakpoint(mobile) {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+   
+    .swiper-container {
+        width: 100%;
+        @include breakpoint(mobile) {
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 20px;
+        }
+    }
+
+
+    .swiper-slide {
+        height: auto;
+        counter-increment: action;
+    }
+
+
+    .swiper-pagination {
+        position: static;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 32px;
+    }
+
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+        background-color: transparent;
+        border: 1px solid $green;
+        opacity: 1;
+        margin: 0 10px !important;
+        transition: background-color .2s, transform .2s;
+        outline: none;
+    }
+
+
+    .swiper-pagination-bullet-active {
+        background-color: $green;
+        transform: scale(1.6);
+    }
+}
