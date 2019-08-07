@@ -993,22 +993,26 @@ svg {
   .user__link--sign-in {
     order: 3; } }
 
-@media only screen and (max-width: 1366px) {
-  .user__link--sign-up {
-    text-transform: uppercase;
-    border: 2px solid white;
-    margin-left: 60px;
-    letter-spacing: .2px;
-    padding: 11px 26px; } }
-
-@media only screen and (max-width: 968px) {
-  .user__link--sign-up {
-    margin-left: 30px; } }
-
-@media only screen and (max-width: 768px) {
-  .user__link--sign-up {
-    margin-left: 0;
-    margin-bottom: 30px; } }
+.user__link--sign-up {
+  transition: background-color .2s, color .2s; }
+  .user__link--sign-up:hover {
+    text-decoration: none;
+    background-color: #fff;
+    color: #256963; }
+  @media only screen and (max-width: 1366px) {
+    .user__link--sign-up {
+      text-transform: uppercase;
+      border: 2px solid white;
+      margin-left: 60px;
+      letter-spacing: .2px;
+      padding: 11px 26px; } }
+  @media only screen and (max-width: 968px) {
+    .user__link--sign-up {
+      margin-left: 30px; } }
+  @media only screen and (max-width: 768px) {
+    .user__link--sign-up {
+      margin-left: 0;
+      margin-bottom: 30px; } }
 
 .burger-menu {
   display: flex;
@@ -1534,6 +1538,12 @@ footer {
   @media only screen and (max-width: 968px) {
     .how-to-get__stages-action-details {
       margin-top: 5px; } }
+  .how-to-get__stages-action-details a {
+    display: inline-block; }
+    .how-to-get__stages-action-details a:link, .how-to-get__stages-action-details a:visited {
+      color: #256963; }
+    .how-to-get__stages-action-details a:hover {
+      text-decoration: underline; }
 
 @media only screen and (max-width: 768px) {
   .how-to-get__stages-slider {
@@ -1701,11 +1711,12 @@ footer {
   text-transform: uppercase;
   display: block;
   position: relative;
-  left: -3px; }
+  left: -5px; }
   @media only screen and (max-width: 1200px) {
     .bonus__categories-heading-large-text {
       font-size: 80px;
-      line-height: 90px; } }
+      line-height: 90px;
+      left: -3px; } }
   @media only screen and (max-width: 968px) {
     .bonus__categories-heading-large-text {
       font-size: 60px;
@@ -2086,14 +2097,16 @@ footer {
     z-index: 2; }
 
 .bonus__partners-tabs-hide-wrapper {
-  height: 450px;
+  height: 530px;
   overflow: hidden;
   position: relative;
   padding-bottom: 60px;
   padding-left: 60px;
   padding-right: 60px;
   margin-left: -60px;
-  margin-right: -60px; }
+  margin-right: -60px;
+  padding-top: 80px;
+  margin-top: -80px; }
   @media only screen and (max-width: 968px) {
     .bonus__partners-tabs-hide-wrapper {
       height: 800px; } }
@@ -2170,7 +2183,11 @@ footer {
   color: #4B4D53;
   padding: 20px;
   border-radius: 5px;
-  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.12); }
+  box-shadow: 0px 0px 60px rgba(0, 0, 0, 0.12);
+  transition: transform .3s ease-out, box-shadow .3s; }
+  .bonus__partners-grid-card:hover {
+    transform: translateZ(0) translateY(-14px);
+    box-shadow: 0px 0px 70px rgba(0, 0, 0, 0.05); }
 
 .bonus__partners-grid-card-heading-block {
   display: flex;

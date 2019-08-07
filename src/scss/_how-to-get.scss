@@ -237,6 +237,19 @@
         margin-top: 5px;
     }
 
+
+    a {
+        display: inline-block;
+        &:link,
+        &:visited {
+            color: $green;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     
 }
 
