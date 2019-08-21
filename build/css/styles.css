@@ -995,17 +995,21 @@ svg {
 
 .user__link--sign-up {
   transition: background-color .2s, color .2s; }
-  .user__link--sign-up:hover {
-    text-decoration: none;
-    background-color: #fff;
-    color: #256963; }
+  .no-touch .user__link--sign-up:hover,
+  .touch .user__link--sign-up:active {
+    text-decoration: underline; }
   @media only screen and (max-width: 1366px) {
     .user__link--sign-up {
       text-transform: uppercase;
       border: 2px solid white;
       margin-left: 60px;
       letter-spacing: .2px;
-      padding: 11px 26px; } }
+      padding: 11px 26px; }
+      .no-touch .user__link--sign-up:hover,
+      .touch .user__link--sign-up:active {
+        text-decoration: none;
+        background-color: #fff;
+        color: #256963; } }
   @media only screen and (max-width: 968px) {
     .user__link--sign-up {
       margin-left: 30px; } }
@@ -1534,7 +1538,8 @@ footer {
   font-size: 16px;
   line-height: 24px;
   color: #7E7E83;
-  margin-top: 25px; }
+  margin-top: 25px;
+  width: 100%; }
   @media only screen and (max-width: 968px) {
     .how-to-get__stages-action-details {
       margin-top: 5px; } }

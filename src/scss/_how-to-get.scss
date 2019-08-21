@@ -232,6 +232,7 @@
     line-height: 24px;
     color: #7E7E83;
     margin-top: 25px;
+    width: 100%;
     @include breakpoint(small-tablet) {
        
         margin-top: 5px;
