@@ -1,36 +1,33 @@
+import { TweenMax } from "gsap/TweenMax";
+
+
+
 export default function() {
-    const accordeons = Array.from(document.querySelectorAll('.js-accordeons'));
+    const accordeons = Array.from(document.querySelectorAll('.js-accordeon'));
 
     accordeons.forEach(accordeon => {
-        const items = Array.from(accordeon.children);
-        let openAccordeon = null;
+        const btn = accordeon.querySelector('.js-accordeon-open');
+        const content = accordeon.querySelector('.js-accordeon-content');
+        let accordeonOpen = false;
 
-        items.forEach(item => {
-            const btn = item.querySelector('.qa__accordeons-open-btn');
-            const content = item.querySelector('.qa__accordeons-content');
-
-            btn.addEventListener('click', event => {
-                event.preventDefault();
-                handleAccordeon(item, content);
-            });
-        });
-
-        function handleAccordeon(item, content) {
-            if (!openAccordeon) {
-                item.classList.add('open');
-                $(content).slideDown();
-                openAccordeon = item;
-            } else if(openAccordeon === item) {
-                item.classList.remove('open');
-                $(content).slideUp();
-                openAccordeon = null;
-            } else {
-                openAccordeon.classList.remove('open');
-                $(openAccordeon.querySelector('.qa__accordeons-content')).slideUp();
-                item.classList.add('open');
-                $(content).slideDown();
-                openAccordeon = item;
-            }
+        if (!btn || !content) {
+            console.error('No btn or content')
         }
+
+        btn.addEventListener('click', function(event) {
+            event.preventDefault();
+            btn.classList.toggle('active');
+            if (!accordeonOpen) {
+                TweenMax.set(content, { clearProps: 'all' });
+                TweenMax.set(content, { height: 'auto' });
+                TweenMax.from(content, 0.4, { height: 0 });
+                accordeonOpen = true;
+            } else {
+                TweenMax.set(content, { clearProps: 'all' });
+                TweenMax.set(content, { height: 'auto' });
+                TweenMax.to(content, 0.4, { height: 0 });
+                accordeonOpen = false;
+            }
+        })
     });
 }

@@ -419,6 +419,8 @@
 .bonus__partners-tabs-navigation {
     display: flex;
     align-items: center;
+    position: relative;
+    z-index: 100;
     @include breakpoint(mobile) {
         flex-direction: column;
         align-items: stretch;
@@ -469,6 +471,7 @@
     margin-right: 40px;
     display: flex;
     align-items: flex-start;
+    -webkit-tap-highlight-color: transparent;
     @include breakpoint(laptop) {
         font-size: 18px;
         line-height: 34px;
@@ -493,6 +496,13 @@
         color: white;
     }
 
+    .no-touch &:hover,
+    .touch &:active {
+        &::before {
+            transform: translateZ(0) scaleX(1);
+        }
+    }
+
     &::before {
         content: '';
         position: absolute;
@@ -504,6 +514,7 @@
         transform-origin: left center;
         transform: translateZ(0) scaleX(0);
         transition: transform 0.3s ease-out;
+        pointer-events: none;
         @include breakpoint(small-tablet) {
             display: none;
         }
@@ -596,7 +607,9 @@
         width: 100%;
         height: 140px;
         background-image: linear-gradient(to top, white 30px, rgba(white, 0));
+       
         pointer-events: none;
+       
     }
 
     &.shown {
@@ -674,7 +687,7 @@
     border-radius: 5px;
     box-shadow: 0px 0px 60px rgba(black, 0.12);
     transition: transform .3s ease-out, box-shadow .3s;
-    &:hover {
+    .no-touch &:hover {
         transform: translateZ(0) translateY(-14px);
         box-shadow: 0px 0px 70px rgba(black, 0.05);
     }

@@ -14,6 +14,7 @@ import accordeons from './accordeons';
 import modals from './modals';
 import bonusSlider from './bonusSlider';
 import numberSlider from './numberSlider';
+import hideHeader from './hideHeader';
 
 document.addEventListener('DOMContentLoaded', function() {
     // Полифилл .contains для IE 11
@@ -63,5 +64,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Слайдер с цифрами
 
     numberSlider();
+
+    // Скрывать хедер на скролл
+
+    hideHeader();
     
 });

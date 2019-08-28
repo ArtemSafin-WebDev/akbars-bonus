@@ -33,6 +33,10 @@
 .page-footer__hocks {
     position: relative;
     z-index: 1;
+    @include breakpoint(mobile) {
+        display: flex;
+        flex-direction: column;
+    }
     &::before {
         content: '';
         position: absolute;
@@ -154,7 +158,7 @@
         margin-bottom: 72px;
     }
     @include breakpoint(mobile) {
-        margin-bottom: 45px;
+        margin-bottom: 25px;
         display: block;
         width: 100%;
         text-align: center;
@@ -189,11 +193,13 @@
         width: 360px;
         bottom: -50px;
     }
-    @include breakpoint(small-tablet) {
+    @include breakpoint(mobile) {
         position: static;
-        width: 100%;
-        height: auto;
-        margin-bottom: -60px;
+        width: auto;
+        height: 492px;
+        margin: 0 auto;
+        margin-bottom: -130px;
+        @include objectFitContain();
     }
 }
 
