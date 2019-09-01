@@ -1,11 +1,12 @@
 .how-to-get {
     display: flex;
     padding-bottom: 100px;
+    opacity: 0;
+    visibility: hidden;
     @include breakpoint(small-tablet) {
         padding-bottom: 60px;
     }
 }
-
 
 .how-to-get__image-block {
     width: 400px;
@@ -14,23 +15,24 @@
     @include breakpoint(laptop) {
         display: none;
     }
-    &::before {
-        content: '';
-        width: 436px;
-        height: 436px;
-        display: block;
-        position: absolute;
-        z-index: -1;
-        pointer-events: none;
-        top: 0;
-        left: 0;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: contain;
-        background-image: url("data:image/svg+xml,%3Csvg height='100' width='100' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%23256963;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23D81E23;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='50' fill='url(%23grad1)' /%3E%3C/svg%3E");
-    }
 }
 
+.how-to-get__image-block-circle {
+    width: 436px;
+    height: 436px;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-image: url("data:image/svg+xml,%3Csvg height='100' width='100' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Cdefs%3E%3ClinearGradient id='grad1' x1='0%25' y1='0%25' x2='100%25' y2='0%25'%3E%3Cstop offset='0%25' style='stop-color:%23256963;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23D81E23;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Ccircle cx='50' cy='50' r='50' fill='url(%23grad1)' /%3E%3C/svg%3E");
+
+    // transform: scale(0);
+}
 
 .how-to-get__image {
     max-width: initial;
@@ -39,13 +41,10 @@
     margin-top: -60px;
 }
 
-
 .how-to-get__stages-block {
     width: 50%;
     flex-grow: 1;
 }
-
-
 
 .how-to-get__stages-heading {
     text-align: right;
@@ -56,12 +55,11 @@
     }
 }
 
-
 .how-to-get__stages-heading-small-text {
     font-size: 35px;
     line-height: 1.15;
     font-weight: 300;
-    letter-spacing: .25px;
+    letter-spacing: 0.25px;
     color: $light-grey;
     display: block;
     @include breakpoint(laptop) {
@@ -80,10 +78,10 @@
     color: $dark-grey;
     font-size: 110px;
     line-height: 1;
-    letter-spacing: .25px;
+    letter-spacing: 0.25px;
     font-weight: 700;
     display: block;
-   
+
     @include breakpoint(laptop) {
         font-size: 80px;
         line-height: 90px;
@@ -98,19 +96,16 @@
         font-size: 38px;
         line-height: 38px;
     }
-    
 }
-
 
 .how-to-get__stages-list {
     display: flex;
-    counter-reset: action;  
+    counter-reset: action;
     margin: -10px;
     @include breakpoint(small-tablet) {
         flex-wrap: wrap;
     }
 }
-
 
 .how-to-get__stages-list-item {
     width: 25%;
@@ -125,7 +120,7 @@
     }
     &::after {
         content: '';
-       right: -5%;
+        right: -5%;
         top: 110px;
         position: absolute;
         width: 50px;
@@ -145,7 +140,6 @@
         }
     }
 
-
     &:nth-child(even) {
         @include breakpoint(small-tablet) {
             &::after {
@@ -155,14 +149,12 @@
     }
 }
 
-
 .how-to-get__stages-card {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 }
-
 
 .how-to-get__stages-number {
     position: relative;
@@ -171,12 +163,8 @@
         font-size: 177px;
         font-weight: 700;
         line-height: 1.2;
-        letter-spacing: .25px;
-        text-shadow:
-		-1px -1px 0 $light-grey,
-		1px -1px 0 $light-grey,
-		-1px 1px 0 $light-grey,
-        1px 1px 0 $light-grey;
+        letter-spacing: 0.25px;
+        text-shadow: -1px -1px 0 $light-grey, 1px -1px 0 $light-grey, -1px 1px 0 $light-grey, 1px 1px 0 $light-grey;
         color: white;
         @supports ((text-stroke: 1px $light-grey) or (-webkit-text-stroke: 1px $light-grey)) {
             text-stroke: 1px $light-grey;
@@ -195,7 +183,7 @@
         font-size: 120px;
         font-weight: 700;
         line-height: 1.2;
-        letter-spacing: .25px;
+        letter-spacing: 0.25px;
         position: absolute;
         top: 50%;
         left: 0;
@@ -207,15 +195,13 @@
             background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
     }
 }
-
 
 .how-to-get__stages-action {
     font-size: 22px;
     line-height: 1.55;
-    color: #5F5F5F;
+    color: #5f5f5f;
     @include breakpoint(small-tablet) {
         font-size: 16px;
         line-height: 24px;
@@ -226,18 +212,15 @@
     }
 }
 
-
 .how-to-get__stages-action-details {
     font-size: 16px;
     line-height: 24px;
-    color: #7E7E83;
+    color: #7e7e83;
     margin-top: 25px;
     width: 100%;
     @include breakpoint(small-tablet) {
-       
         margin-top: 5px;
     }
-
 
     a {
         display: inline-block;
@@ -250,19 +233,14 @@
             text-decoration: underline;
         }
     }
-
-    
 }
-
-
-
 
 .how-to-get__stages-slider {
     @include breakpoint(mobile) {
         margin-left: -20px;
         margin-right: -20px;
     }
-   
+
     .swiper-container {
         width: 100%;
         @include breakpoint(mobile) {
@@ -272,12 +250,10 @@
         }
     }
 
-
     .swiper-slide {
         height: auto;
         counter-increment: action;
     }
-
 
     .swiper-pagination {
         position: static;
@@ -294,10 +270,9 @@
         border: 1px solid $green;
         opacity: 1;
         margin: 0 10px !important;
-        transition: background-color .2s, transform .2s;
+        transition: background-color 0.2s, transform 0.2s;
         outline: none;
     }
-
 
     .swiper-pagination-bullet-active {
         background-color: $green;

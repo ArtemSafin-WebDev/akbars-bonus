@@ -14,6 +14,11 @@
         transform: translateZ(0) translateY(-100%);
     }
 
+
+    .burger-menu-open.header-hidden & {
+        transform: translateZ(0) translateY(0);
+    }
+
     @include breakpoint(mobile) {
         height: 40px;
     }

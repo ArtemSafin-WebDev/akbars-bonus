@@ -14,7 +14,8 @@
             <!-- partial:partials/_header.html --><!-- partial -->
             <main>
                 <div class="container container--inner">
-                    <div class="hocks-intro">
+                    <section class="hocks-intro" id="hocks-intro">
+                        <span class="hocks-intro__gradient-bg"></span>
                         <div class="hocks-intro__text-block">
                             <h2 class="hocks-intro__heading">
                                 Айда<br />
@@ -26,7 +27,7 @@
                             </p>
                             <a href="#" class="hocks-intro__register-link">Зарегистрироваться</a>
                         </div>
-                        <a href="misc/MAIN-DRAFT_mus7.mp4" data-fancybox data-width="640" data-height="360" class="hocks-intro__video-link">
+                        <a href="misc/MAIN-DRAFT_mus7.mp4" data-fancybox data-width="1280" data-height="720" class="hocks-intro__video-link">
                             <span class="hocks-intro__video-link-image-container">
                                 <img src="img/video-preview@2x.jpg" srcset="img/video-preview.jpg, img/video-preview@2x.jpg 2x" alt="Превью видео" class="hocks-intro__video-link-preview" />
                                 <svg width="84" height="84" aria-hidden="true" class="icon-play">
@@ -34,9 +35,11 @@
                                 </svg>
                             </span>
                         </a>
-                    </div>
-                    <div class="how-to-get" id="how-to-get">
+                        <span class="hocks-intro__circle"></span>
+                    </section>
+                    <section class="how-to-get" id="how-to-get">
                         <div class="how-to-get__image-block">
+                            <span class="how-to-get__image-block-circle"></span>
                             <img src="img/azevedo@2x.png" srcset="img/azevedo.png, img/azevedo@2x.png 2x" alt="Азеведо" class="how-to-get__image" />
                         </div>
                         <div class="how-to-get__stages-block">
@@ -98,8 +101,8 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="bonus">
+                    </section>
+                    <section class="bonus">
                         <div class="bonus__categories" id="bonuses">
                             <h2 class="bonus__categories-heading">
                                 <span class="bonus__categories-heading-small-text">
@@ -153,6 +156,7 @@
                                     <div class="swiper-pagination"></div>
                                 </div>
                             </div>
+                            <span class="bonus__categories-triangles" id="parallax-triangles"> </span>
                         </div>
 
                         <div class="bonus__partners" id="partners">
@@ -189,7 +193,7 @@
                                         <div class="bonus__partners-tabs-hide-wrapper js-hide">
                                             <div class="bonus__partners-grid js-masonry-grid">
                                                 <div class="bonus__partners-grid-item">
-                                                    <div class="bonus__partners-grid-card">
+                                                    <a href="streetfoodbar.ru" class="bonus__partners-grid-card">
                                                         <div class="bonus__partners-grid-card-heading-block">
                                                             <span class="bonus__partners-grid-card-category bonus__partners-grid-card-category--rest">
                                                                 Отдых
@@ -219,13 +223,13 @@
                                                                 Скидка не суммируется с акциями и другими специальными предложениями.
                                                             </p>
                                                         </div>
-                                                        <a href="streetfoodbar.ru" class="bonus__partners-grid-card-link">
+                                                        <span class="bonus__partners-grid-card-link">
                                                             streetfoodbar.ru
-                                                        </a>
-                                                    </div>
+                                                        </span>
+                                                    </a>
                                                 </div>
                                                 <div class="bonus__partners-grid-item">
-                                                    <div class="bonus__partners-grid-card">
+                                                    <a href="vitality-life.ru" class="bonus__partners-grid-card">
                                                         <div class="bonus__partners-grid-card-heading-block">
                                                             <span class="bonus__partners-grid-card-category bonus__partners-grid-card-category--fitness">
                                                                 Фитнес
@@ -252,13 +256,13 @@
                                                                 Инновационный спорт-бар с передовыми технологиями, специализирующийся на популярной уличной еде.
                                                             </p>
                                                         </div>
-                                                        <a href="vitality-life.ru" class="bonus__partners-grid-card-link">
+                                                        <span class="bonus__partners-grid-card-link">
                                                             vitality-life.ru
-                                                        </a>
-                                                    </div>
+                                                        </span>
+                                                    </a>
                                                 </div>
                                                 <div class="bonus__partners-grid-item">
-                                                    <div class="bonus__partners-grid-card">
+                                                    <a href="vitality-life.ru" class="bonus__partners-grid-card">
                                                         <div class="bonus__partners-grid-card-heading-block">
                                                             <span class="bonus__partners-grid-card-category bonus__partners-grid-card-category--health">
                                                                 Здоровье
@@ -288,13 +292,13 @@
                                                                 Скидка не суммируется с акциями и другими специальными предложениями.
                                                             </p>
                                                         </div>
-                                                        <a href="vitality-life.ru" class="bonus__partners-grid-card-link">
+                                                        <span class="bonus__partners-grid-card-link">
                                                             vitality-life.ru
-                                                        </a>
-                                                    </div>
+                                                        </span>
+                                                    </a>
                                                 </div>
                                                 <div class="bonus__partners-grid-item">
-                                                    <div class="bonus__partners-grid-card">
+                                                    <a href="streetfoodbar.ru" class="bonus__partners-grid-card">
                                                         <div class="bonus__partners-grid-card-heading-block">
                                                             <span class="bonus__partners-grid-card-category bonus__partners-grid-card-category--rest">
                                                                 Отдых
@@ -324,13 +328,13 @@
                                                                 Скидка не суммируется с акциями и другими специальными предложениями.
                                                             </p>
                                                         </div>
-                                                        <a href="streetfoodbar.ru" class="bonus__partners-grid-card-link">
+                                                        <span class="bonus__partners-grid-card-link">
                                                             streetfoodbar.ru
-                                                        </a>
-                                                    </div>
+                                                        </span>
+                                                    </a>
                                                 </div>
                                                 <div class="bonus__partners-grid-item">
-                                                    <div class="bonus__partners-grid-card">
+                                                    <a href="vitality-life.ru" class="bonus__partners-grid-card">
                                                         <div class="bonus__partners-grid-card-heading-block">
                                                             <span class="bonus__partners-grid-card-category bonus__partners-grid-card-category--fitness">
                                                                 Фитнес
@@ -357,13 +361,13 @@
                                                                 Инновационный спорт-бар с передовыми технологиями, специализирующийся на популярной уличной еде.
                                                             </p>
                                                         </div>
-                                                        <a href="vitality-life.ru" class="bonus__partners-grid-card-link">
+                                                        <span class="bonus__partners-grid-card-link">
                                                             vitality-life.ru
-                                                        </a>
-                                                    </div>
+                                                        </span>
+                                                    </a>
                                                 </div>
                                                 <div class="bonus__partners-grid-item">
-                                                    <div class="bonus__partners-grid-card">
+                                                    <a href="streetfoodbar.ru" class="bonus__partners-grid-card">
                                                         <div class="bonus__partners-grid-card-heading-block">
                                                             <span class="bonus__partners-grid-card-category bonus__partners-grid-card-category--rest">
                                                                 Отдых
@@ -393,13 +397,13 @@
                                                                 Скидка не суммируется с акциями и другими специальными предложениями.
                                                             </p>
                                                         </div>
-                                                        <a href="streetfoodbar.ru" class="bonus__partners-grid-card-link">
+                                                        <span class="bonus__partners-grid-card-link">
                                                             streetfoodbar.ru
-                                                        </a>
-                                                    </div>
+                                                        </span>
+                                                    </a>
                                                 </div>
                                                 <div class="bonus__partners-grid-item">
-                                                    <div class="bonus__partners-grid-card">
+                                                    <a href="vitality-life.ru" class="bonus__partners-grid-card">
                                                         <div class="bonus__partners-grid-card-heading-block">
                                                             <span class="bonus__partners-grid-card-category bonus__partners-grid-card-category--fitness">
                                                                 Фитнес
@@ -426,13 +430,13 @@
                                                                 Инновационный спорт-бар с передовыми технологиями, специализирующийся на популярной уличной еде.
                                                             </p>
                                                         </div>
-                                                        <a href="vitality-life.ru" class="bonus__partners-grid-card-link">
+                                                        <span class="bonus__partners-grid-card-link">
                                                             vitality-life.ru
-                                                        </a>
-                                                    </div>
+                                                        </span>
+                                                    </a>
                                                 </div>
                                                 <div class="bonus__partners-grid-item">
-                                                    <div class="bonus__partners-grid-card">
+                                                    <a href="streetfoodbar.ru" class="bonus__partners-grid-card">
                                                         <div class="bonus__partners-grid-card-heading-block">
                                                             <span class="bonus__partners-grid-card-category bonus__partners-grid-card-category--rest">
                                                                 Отдых
@@ -462,13 +466,13 @@
                                                                 Скидка не суммируется с акциями и другими специальными предложениями.
                                                             </p>
                                                         </div>
-                                                        <a href="streetfoodbar.ru" class="bonus__partners-grid-card-link">
+                                                        <span class="bonus__partners-grid-card-link">
                                                             streetfoodbar.ru
-                                                        </a>
-                                                    </div>
+                                                        </span>
+                                                    </a>
                                                 </div>
                                                 <div class="bonus__partners-grid-item">
-                                                    <div class="bonus__partners-grid-card">
+                                                    <a href="vitality-life.ru" class="bonus__partners-grid-card">
                                                         <div class="bonus__partners-grid-card-heading-block">
                                                             <span class="bonus__partners-grid-card-category bonus__partners-grid-card-category--fitness">
                                                                 Фитнес
@@ -495,10 +499,10 @@
                                                                 Инновационный спорт-бар с передовыми технологиями, специализирующийся на популярной уличной еде.
                                                             </p>
                                                         </div>
-                                                        <a href="vitality-life.ru" class="bonus__partners-grid-card-link">
+                                                        <span class="bonus__partners-grid-card-link">
                                                             vitality-life.ru
-                                                        </a>
-                                                    </div>
+                                                        </span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -510,7 +514,7 @@
                                         <div class="bonus__partners-tabs-hide-wrapper js-hide">
                                             <div class="bonus__partners-grid js-masonry-grid">
                                                 <div class="bonus__partners-grid-item">
-                                                    <div class="bonus__partners-grid-card">
+                                                    <a href="streetfoodbar.ru" class="bonus__partners-grid-card">
                                                         <div class="bonus__partners-grid-card-heading-block">
                                                             <span class="bonus__partners-grid-card-category bonus__partners-grid-card-category--rest">
                                                                 Отдых
@@ -540,13 +544,13 @@
                                                                 Скидка не суммируется с акциями и другими специальными предложениями.
                                                             </p>
                                                         </div>
-                                                        <a href="streetfoodbar.ru" class="bonus__partners-grid-card-link">
+                                                        <span  class="bonus__partners-grid-card-link">
                                                             streetfoodbar.ru
-                                                        </a>
-                                                    </div>
+                                                        </span>
+                                                    </a>
                                                 </div>
                                                 <div class="bonus__partners-grid-item">
-                                                    <div class="bonus__partners-grid-card">
+                                                    <a href="vitality-life.ru"  class="bonus__partners-grid-card">
                                                         <div class="bonus__partners-grid-card-heading-block">
                                                             <span class="bonus__partners-grid-card-category bonus__partners-grid-card-category--health">
                                                                 Здоровье
@@ -576,13 +580,13 @@
                                                                 Скидка не суммируется с акциями и другими специальными предложениями.
                                                             </p>
                                                         </div>
-                                                        <a href="vitality-life.ru" class="bonus__partners-grid-card-link">
+                                                        <span class="bonus__partners-grid-card-link">
                                                             vitality-life.ru
-                                                        </a>
-                                                    </div>
+                                                        </span>
+                                                    </a>
                                                 </div>
                                                 <div class="bonus__partners-grid-item">
-                                                    <div class="bonus__partners-grid-card">
+                                                    <a href="vitality-life.ru"  class="bonus__partners-grid-card">
                                                         <div class="bonus__partners-grid-card-heading-block">
                                                             <span class="bonus__partners-grid-card-category bonus__partners-grid-card-category--fitness">
                                                                 Фитнес
@@ -609,13 +613,13 @@
                                                                 Инновационный спорт-бар с передовыми технологиями, специализирующийся на популярной уличной еде.
                                                             </p>
                                                         </div>
-                                                        <a href="vitality-life.ru" class="bonus__partners-grid-card-link">
+                                                        <span class="bonus__partners-grid-card-link">
                                                             vitality-life.ru
-                                                        </a>
-                                                    </div>
+                                                        </span>
+                                                    </a>
                                                 </div>
                                                 <div class="bonus__partners-grid-item">
-                                                    <div class="bonus__partners-grid-card">
+                                                    <a href="vitality-life.ru" class="bonus__partners-grid-card">
                                                         <div class="bonus__partners-grid-card-heading-block">
                                                             <span class="bonus__partners-grid-card-category bonus__partners-grid-card-category--fitness">
                                                                 Фитнес
@@ -642,10 +646,10 @@
                                                                 Инновационный спорт-бар с передовыми технологиями, специализирующийся на популярной уличной еде.
                                                             </p>
                                                         </div>
-                                                        <a href="vitality-life.ru" class="bonus__partners-grid-card-link">
+                                                        <span class="bonus__partners-grid-card-link">
                                                             vitality-life.ru
-                                                        </a>
-                                                    </div>
+                                                        </span>
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
@@ -656,8 +660,8 @@
                                 </ul>
                             </div>
                         </div>
-                    </div>
-                    <div class="qa" id="faq">
+                    </section>
+                    <section class="qa" id="faq">
                         <div class="qa__top-section">
                             <h2 class="qa__heading">
                                 <span class="qa__heading-small-text">
@@ -669,10 +673,7 @@
                             </h2>
                             <a href="#" class="qa__ask-question-btn js-modal-open">
                                 Задать свой вопрос
-                                <span class="qa__ask-question-btn-decorative">
-                                    
-                                </span>
-                               
+                                <span class="qa__ask-question-btn-decorative"> </span>
                             </a>
                         </div>
                         <ul class="qa__accordeons-list">
@@ -745,7 +746,7 @@
                                 </div>
                             </li>
                         </ul>
-                    </div>
+                    </section>
                 </div>
             </main>
             <!-- partial:partials/_footer.html --><!-- partial -->

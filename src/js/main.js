@@ -15,6 +15,7 @@ import modals from './modals';
 import bonusSlider from './bonusSlider';
 import numberSlider from './numberSlider';
 import hideHeader from './hideHeader';
+import animations from './animations';
 
 document.addEventListener('DOMContentLoaded', function() {
     // Полифилл .contains для IE 11
@@ -68,5 +69,9 @@ document.addEventListener('DOMContentLoaded', function() {
     // Скрывать хедер на скролл
 
     hideHeader();
+
+    // Анимации
+
+    animations();
     
 });
