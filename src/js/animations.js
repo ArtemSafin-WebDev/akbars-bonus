@@ -11,6 +11,7 @@ export default function() {
     const bonuses = document.getElementById('bonuses');
     const partners = document.getElementById('partners');
     const faq = document.getElementById('faq');
+    const footerHocks = document.getElementById('footer-hocks');
 
     const controller = new ScrollMagic.Controller();
 
@@ -141,7 +142,7 @@ export default function() {
         const timeline = new TimelineMax();
 
         timeline.to(triangles, 1, {
-            y: '20%',
+            y: '30%',
             ease: Power0.easeNone
         });
 
@@ -280,6 +281,50 @@ export default function() {
 
         const scene = new ScrollMagic.Scene({
             triggerElement: faq,
+            triggerHook: 1,
+            reverse: false
+        })
+            .setTween(timeline)
+            .addTo(controller);
+    }
+
+    if (footerHocks) {
+        const leopard = footerHocks.querySelector('.page-footer__hocks-leopard');
+        const heading = footerHocks.querySelector('.page-footer__hocks-heading');
+        const link = footerHocks.querySelector('.page-footer__hocks-link');
+        const bottomRow = footerHocks.querySelector('.page-footer__links');
+        console.log('bottom row', bottomRow)
+
+        const timeline = new TimelineMax();
+
+        timeline
+            .from(heading, 2, {
+                autoAlpha: 0,
+                xPercent: -30,
+                ease: Power4.easeOut
+            })
+            .from(link, 1, {
+                autoAlpha: 0,
+                y: 30,
+                ease: Power4.easeOut
+            }, '-=1')
+            .from(
+                leopard,
+                2,
+                {
+                    autoAlpha: 0,
+                    xPercent: 30,
+                    ease: Power4.easeOut
+                },
+                0
+            )
+            .from(bottomRow, 1, {
+                autoAlpha: 0,
+                ease: Power4.easeOut
+            }, 0);
+
+        const scene = new ScrollMagic.Scene({
+            triggerElement: footerHocks,
             triggerHook: 1,
             reverse: false
         })

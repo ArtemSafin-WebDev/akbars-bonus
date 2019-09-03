@@ -4,7 +4,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #e4e4e4;
+    background-color: white;
     display: flex;
     flex-direction: column;
     z-index: 5000;
@@ -229,9 +229,13 @@
     position: absolute;
     top: 80px;
     right: 80px;
-    // background-color: orange;
     z-index: 1000;
     display: block;
+    transition: transform .2s;
+    .no-touch &:hover,
+    .touch &:active {
+        transform: rotate(360deg);
+    }
 
     @include breakpoint(small-tablet) {
         top: 40px;
@@ -254,7 +258,6 @@
             left: 50%;
             margin-top: -2px;
             margin-left: -15px;
-            // background-color: orange;
             &:nth-child(1) {
                 background-image: linear-gradient(to right, $green, $red);
             }

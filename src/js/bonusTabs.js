@@ -6,7 +6,7 @@ export default function() {
         const tabItems = Array.from(item.querySelector('.js-tabs-list').children);
         let activeTabIndex;
 
-        if (tabButtons && tabItems) {
+        if (tabButtons.length > 1 && tabItems.length > 1) {
             if (tabButtons.length !== tabItems.length) {
                 console.log('Количество элементов управления не равно количеству табов');
                 return;

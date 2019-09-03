@@ -15,7 +15,7 @@
     }
 
 
-    .burger-menu-open.header-hidden & {
+    .header-hidden .burger-menu-open & {
         transform: translateZ(0) translateY(0);
     }
 
