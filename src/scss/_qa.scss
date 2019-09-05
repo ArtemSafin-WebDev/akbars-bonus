@@ -267,6 +267,19 @@
             margin-bottom: 0;
         }
     }
+
+
+    a {
+        &:link,
+        &:visited {
+            color: $green;
+        }
+
+        .no-touch &:hover,
+        .touch &:active {
+            text-decoration: underline;
+        }
+    }
 }
 
 .qa__accordeons-list {
